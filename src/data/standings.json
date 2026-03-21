@@ -1,0 +1,7 @@
+[
+  { "rank": 1, "team": "Nicosia Stars", "played": 10, "won": 8, "lost": 2, "points": 24 },
+  { "rank": 2, "team": "Limassol Waves", "played": 10, "won": 7, "lost": 3, "points": 21 },
+  { "rank": 3, "team": "Larnaca Sea Gulls", "played": 10, "won": 6, "lost": 4, "points": 18 },
+  { "rank": 4, "team": "Famagusta Phoenix", "played": 10, "won": 5, "lost": 5, "points": 15 },
+  { "rank": 5, "team": "Paphos Aphrodite", "played": 10, "won": 4, "lost": 6, "points": 12 }
+]

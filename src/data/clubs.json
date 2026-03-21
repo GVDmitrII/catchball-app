@@ -1,0 +1,47 @@
+[
+  {
+    "id": "nic-01",
+    "name": "Nicosia Stars",
+    "city": "Никосия",
+    "coach": "Maria Georgiou",
+    "schedule": "Пн, Ср, Пт 19:00",
+    "whatsapp": "+35799000001",
+    "image": "/images/club-nicosia.jpg"
+  },
+  {
+    "id": "lim-01",
+    "name": "Limassol Waves",
+    "city": "Лимассол",
+    "coach": "Elena Costa",
+    "schedule": "Вт, Чт 18:30, Сб 10:00",
+    "whatsapp": "+35799000002",
+    "image": "/images/club-limassol.jpg"
+  },
+  {
+    "id": "lar-01",
+    "name": "Larnaca Sea Gulls",
+    "city": "Ларнака",
+    "coach": "Anna Papandreou",
+    "schedule": "Пн, Чт 19:30",
+    "whatsapp": "+35799000003",
+    "image": "/images/club-larnaca.jpg"
+  },
+  {
+    "id": "paf-01",
+    "name": "Paphos Aphrodite",
+    "city": "Пафос",
+    "coach": "Stella Ioannou",
+    "schedule": "Ср, Пт 18:00",
+    "whatsapp": "+35799000004",
+    "image": "/images/club-paphos.jpg"
+  },
+  {
+    "id": "fam-01",
+    "name": "Famagusta Phoenix",
+    "city": "Фамагуста (Айя Напа/Протарас)",
+    "coach": "Katerina Demetriou",
+    "schedule": "Вт, Пт 19:00",
+    "whatsapp": "+35799000005",
+    "image": "/images/club-famagusta.jpg"
+  }
+]

@@ -1,0 +1,42 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { ContactForm } from '../ui/ContactForm';
+
+export function Footer() {
+  const { t } = useTranslation();
+  return (
+    <footer className="bg-deep-navy text-white pt-12 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-extrabold text-fuchsia-accent mb-4 tracking-tight">Catch & Serve Ball Cyprus</h3>
+            <p className="text-gray-300 mb-4 max-w-sm">
+              {t('footer.desc')}
+            </p>
+          </div>
+          <div>
+            <h4 className="text-lg font-bold mb-4">{t('footer.nav_title')}</h4>
+            <ul className="space-y-2">
+              <li><Link to="/clubs" className="text-gray-300 hover:text-white transition-colors">{t('navbar.clubs')}</Link></li>
+              <li><Link to="/standings" className="text-gray-300 hover:text-white transition-colors">{t('navbar.standings')}</Link></li>
+              <li><Link to="/events" className="text-gray-300 hover:text-white transition-colors">{t('navbar.events')}</Link></li>
+              <li><Link to="/rules" className="text-gray-300 hover:text-white transition-colors">{t('navbar.rules')}</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-bold mb-4">{t('footer.contact_title')}</h4>
+            <ContactForm />
+          </div>
+        </div>
+        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} Catchball Cyprus Association. All rights reserved.</p>
+          <div className="mt-4 md:mt-0 space-x-4">
+            <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white">Terms of Service</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

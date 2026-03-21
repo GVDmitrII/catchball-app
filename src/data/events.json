@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ev-01",
+    "date": "2026-03-25T18:00:00",
+    "title": "Nicosia Stars vs Limassol Waves",
+    "location": "Eleftheria Indoor Hall, Nicosia",
+    "type": "match"
+  },
+  {
+    "id": "ev-02",
+    "date": "2026-03-28T10:00:00",
+    "title": "Открытая тренировка для новичков",
+    "location": "Larnaca Municipal Stadium",
+    "type": "open_training"
+  }
+]
