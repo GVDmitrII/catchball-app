@@ -11,10 +11,10 @@ export function Button({
   const baseStyles = "inline-flex items-center justify-center font-bold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
-    primary: "bg-fuchsia-accent text-white hover:bg-[#c02055] focus:ring-fuchsia-accent shadow-md hover:shadow-lg",
-    secondary: "bg-deep-navy text-white hover:bg-gray-800 focus:ring-deep-navy shadow-md",
-    outline: "border-2 border-deep-navy text-deep-navy hover:bg-gray-50 focus:ring-deep-navy",
-    ghost: "text-deep-navy hover:bg-gray-100 focus:ring-gray-200"
+    primary: "bg-brand-magenta text-white hover:bg-[#c02055] focus:ring-brand-magenta shadow-md hover:shadow-lg",
+    secondary: "bg-brand-dark text-white hover:bg-gray-800 focus:ring-brand-dark shadow-md",
+    outline: "border-2 border-brand-dark text-brand-dark hover:bg-gray-50 focus:ring-brand-dark",
+    ghost: "text-brand-dark hover:bg-gray-100 focus:ring-gray-200"
   };
 
   const sizes = {

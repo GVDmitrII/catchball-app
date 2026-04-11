@@ -9,7 +9,7 @@ export function LanguageSwitcher() {
   };
 
   const getButtonClass = (lng) => {
-    return `px-2 py-1 text-sm font-bold rounded transition-colors ${i18n.language === lng ? 'bg-fuchsia-accent text-white shadow-sm' : 'text-gray-500 hover:text-deep-navy'}`;
+    return `px-2 py-1 text-sm font-bold rounded transition-colors ${i18n.language === lng ? 'bg-brand-magenta text-white shadow-sm' : 'text-gray-500 hover:text-brand-dark'}`;
   };
 
   return (

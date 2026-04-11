@@ -22,10 +22,10 @@ export function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
-              <div className="w-10 h-10 bg-fuchsia-accent rounded-full flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-10 h-10 bg-brand-magenta rounded-full flex items-center justify-center text-white font-bold text-xl">
                 C&S
               </div>
-              <span className="font-extrabold text-2xl text-deep-navy tracking-tight hidden sm:block">
+              <span className="font-extrabold text-2xl text-brand-dark tracking-tight hidden sm:block">
                 Catchball Cyprus
               </span>
             </Link>
@@ -36,7 +36,7 @@ export function Navbar() {
               <Link 
                 key={link.name} 
                 to={link.path} 
-                className="text-gray-600 hover:text-fuchsia-accent font-bold transition-colors text-lg"
+                className="text-gray-600 hover:text-brand-magenta font-bold transition-colors text-lg"
               >
                 {link.name}
               </Link>
@@ -49,7 +49,7 @@ export function Navbar() {
             <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-fuchsia-accent focus:outline-none transition-colors"
+              className="text-gray-600 hover:text-brand-magenta focus:outline-none transition-colors"
             >
               {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
@@ -64,7 +64,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className="block px-4 py-3 rounded-xl text-lg font-bold text-deep-navy hover:text-fuchsia-accent hover:bg-fuchsia-50 transition-colors"
+                className="block px-4 py-3 rounded-xl text-lg font-bold text-brand-dark hover:text-brand-magenta hover:bg-fuchsia-50 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

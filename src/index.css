@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-magenta: #E91E8C;
+  --color-gold: #F5A623;
+  --color-sky: #29ABE2;
+  --color-dark: #1A1A2E;
+}
+
 body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
-  background-color: #FFFFFF;
-  color: #0A192F;
+  @apply bg-white text-brand-dark;
 }

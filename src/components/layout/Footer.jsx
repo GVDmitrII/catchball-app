@@ -6,11 +6,11 @@ import { ContactForm } from '../ui/ContactForm';
 export function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="bg-deep-navy text-white pt-12 pb-8">
+    <footer className="bg-brand-dark text-white pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-extrabold text-fuchsia-accent mb-4 tracking-tight">Catch & Serve Ball Cyprus</h3>
+            <h3 className="text-2xl font-extrabold text-brand-magenta mb-4 tracking-tight">Catch & Serve Ball Cyprus</h3>
             <p className="text-gray-300 mb-4 max-w-sm">
               {t('footer.desc')}
             </p>
@@ -35,6 +35,19 @@ export function Footer() {
             <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white">Terms of Service</Link>
           </div>
+        </div>
+        <div className="border-t border-white/10 mt-8 pt-6 text-center">
+          <p className="text-xs text-white/50">
+            Designed &amp; developed by{' '}
+            <a
+              href="https://www.olisandra.studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-magenta hover:text-brand-gold transition-colors"
+            >
+              Olisandra Studio
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -100,5 +100,15 @@
     "subtitle": "Championship matches, open trainings, and master classes.",
     "type_match": "Official match",
     "type_training": "Open training / Event"
+  },
+  "gdpr": {
+    "consent_label": "I agree to the processing of my personal data in accordance with the <a href='/privacy'>Privacy Policy</a>",
+    "consent_required": "Please confirm your consent to proceed"
+  },
+  "cookie": {
+    "message": "We use Google Analytics to improve your experience.",
+    "accept": "Accept All",
+    "decline": "Decline",
+    "privacy_link": "Privacy Policy"
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export function Card({ children, className = '', hoverable = false, ...props }) {
-  const baseStyles = "bg-white rounded-[20px] shadow-sm border border-gray-100 overflow-hidden";
+  const baseStyles = "bg-white rounded-btn-lg shadow-sm border border-gray-100 overflow-hidden";
   
   if (hoverable) {
     return (
