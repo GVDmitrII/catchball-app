@@ -26,9 +26,6 @@ export function Navbar() {
               <div className="w-10 h-10 bg-brand-magenta rounded-full flex items-center justify-center text-white font-bold text-xl">
                 C&S
               </div>
-              <span className="font-extrabold text-2xl text-brand-dark tracking-tight hidden sm:block">
-                {t('org_name')}
-              </span>
             </Link>
           </div>
           
