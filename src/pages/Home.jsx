@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import { ArrowRight, Search, Calendar, Info, Users, Trophy, Heart, Activity, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Search, Calendar, Info, Users, Trophy, Heart, Activity, CheckCircle2, Camera } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import clubsData from '../data/clubs.json';
@@ -90,7 +90,55 @@ export function Home() {
         </div>
       </section>
 
-      {/* 3. THE GAME */}
+      {/* 3. ABOUT US */}
+      <section id="about" className="bg-gray-50 py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('about.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('about.subtitle')}</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="grid grid-cols-3 gap-6"
+            >
+              {[
+                { number: t('about.stat1_number'), label: t('about.stat1_label') },
+                { number: t('about.stat2_number'), label: t('about.stat2_label') },
+                { number: t('about.stat3_number'), label: t('about.stat3_label') },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-white rounded-xl shadow-sm p-6 text-center">
+                  <div className="text-4xl font-bold text-brand-magenta mb-2">{stat.number}</div>
+                  <div className="text-sm text-brand-dark font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="border-l-4 border-brand-magenta pl-4"
+            >
+              <h3 className="text-2xl font-bold text-brand-dark mb-4">{t('about.mission_title')}</h3>
+              <p className="text-gray-600 leading-relaxed">{t('about.mission_text')}</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. THE GAME */}
       <section className="bg-gray-50 py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -207,7 +255,70 @@ export function Home() {
         </div>
       </section>
 
-      {/* 5. STANDINGS */}
+      {/* 5. SPONSORS */}
+      <section id="sponsors" className="bg-gray-50 py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('sponsors.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('sponsors.subtitle')}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-12"
+          >
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 text-center mb-6">{t('sponsors.title_sponsors')}</p>
+            <div className="flex flex-wrap justify-center gap-6">
+              {[0, 1].map((i) => (
+                <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 h-24 w-full max-w-xs flex items-center justify-center">
+                  <span className="text-brand-dark font-semibold">{t('sponsors.placeholder')}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12"
+          >
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 text-center mb-6">{t('sponsors.partners')}</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[0, 1, 2, 3].map((i) => (
+                <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 h-16 flex items-center justify-center">
+                  <span className="text-brand-dark font-semibold text-sm">{t('sponsors.placeholder')}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-sm text-gray-500 text-center"
+          >
+            {t('sponsors.become_sponsor')}{' '}
+            <a href="mailto:contact@catchballcyprus.com" className="text-brand-magenta hover:underline">
+              contact@catchballcyprus.com
+            </a>
+          </motion.p>
+        </div>
+      </section>
+
+      {/* 6. STANDINGS */}
       <section className="bg-brand-dark text-white py-24 px-4 m-4 md:m-8 rounded-section">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -249,7 +360,59 @@ export function Home() {
         </div>
       </section>
 
-      {/* 6. BOTTOM CTA */}
+      {/* 6. GALLERY */}
+      <section id="gallery" className="bg-white py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('gallery.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('gallery.subtitle')}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="columns-2 md:columns-3 gap-4 space-y-4"
+          >
+            {[
+              'aspect-video', 'aspect-square', 'aspect-square',
+              'aspect-video', 'aspect-square', 'aspect-video',
+            ].map((aspect, i) => (
+              <div
+                key={i}
+                className={`${aspect} w-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-navy to-brand-dark flex flex-col items-center justify-center gap-3 break-inside-avoid`}
+              >
+                <Camera className="w-10 h-10 text-white/40" />
+                <p className="text-xs text-white/40 font-medium">{t('gallery.placeholder_text')}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 10, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center mt-12"
+          >
+            <a
+              href="#gallery"
+              className="inline-block px-8 py-3 rounded-xl border-2 border-brand-magenta text-brand-magenta font-bold hover:bg-brand-magenta hover:text-white transition-colors text-lg"
+            >
+              {t('gallery.btn')}
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 7. BOTTOM CTA */}
       <section className="py-24 text-center px-4 max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-6xl font-black text-brand-dark mb-6 tracking-tight">{t('bottom_cta.title')}</h2>
         <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">{t('bottom_cta.subtitle')}</p>
