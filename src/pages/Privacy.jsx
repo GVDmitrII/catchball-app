@@ -14,7 +14,7 @@ export default function Privacy() {
         <section>
           <h2 className="text-2xl font-bold text-brand-magenta mb-3">1. Data Controller</h2>
           <p className="text-gray-700 leading-relaxed">
-            Catchball Cyprus Association, Cyprus.<br />
+            CYPRUS CATCH'N SERVE BALL FEDERATION, Cyprus.<br />
             Email: <a href="mailto:contact@catchballcyprus.com" className="text-brand-magenta underline">contact@catchballcyprus.com</a>
           </p>
         </section>
@@ -38,7 +38,7 @@ export default function Privacy() {
           <h2 className="text-2xl font-bold text-brand-magenta mb-3">3. Purpose of Processing</h2>
           <p className="text-gray-700 leading-relaxed">
             The data you submit is used solely to respond to your membership inquiries and to provide
-            information about Catchball Cyprus clubs, events, and activities.
+            information about CYPRUS CATCH'N SERVE BALL FEDERATION clubs, events, and activities.
           </p>
         </section>
 

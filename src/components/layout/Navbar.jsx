@@ -10,6 +10,7 @@ export function Navbar() {
   const { t } = useTranslation();
 
   const navLinks = [
+    { name: t('navbar.about'), path: '/#about' },
     { name: t('navbar.clubs'), path: '/clubs' },
     { name: t('navbar.standings'), path: '/standings' },
     { name: t('navbar.events'), path: '/events' },
@@ -26,7 +27,7 @@ export function Navbar() {
                 C&S
               </div>
               <span className="font-extrabold text-2xl text-brand-dark tracking-tight hidden sm:block">
-                Catchball Cyprus
+                {t('org_name')}
               </span>
             </Link>
           </div>

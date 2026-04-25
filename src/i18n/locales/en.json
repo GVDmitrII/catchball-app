@@ -1,5 +1,7 @@
 {
+  "org_name": "CYPRUS CATCH'N SERVE BALL FEDERATION",
   "navbar": {
+    "about": "About",
     "clubs": "Clubs",
     "standings": "Standings",
     "events": "Events",
@@ -7,7 +9,7 @@
     "join_btn": "Join the Game"
   },
   "hero": {
-    "badge": "Official Cyprus Association",
+    "badge": "CYPRUS CATCH'N SERVE BALL FEDERATION",
     "title_line1": "Catchball in Cyprus",
     "title_line2": "Join the Game",
     "description": "Health, networking, and female energy. Discover the most dynamic and accessible team sport for women!",
@@ -104,6 +106,32 @@
   "gdpr": {
     "consent_label": "I agree to the processing of my personal data in accordance with the <a href='/privacy'>Privacy Policy</a>",
     "consent_required": "Please confirm your consent to proceed"
+  },
+  "sponsors": {
+    "title": "Partners & Sponsors",
+    "subtitle": "Organizations that support catchball in Cyprus",
+    "placeholder": "Your Logo Here",
+    "title_sponsors": "Title Sponsors",
+    "partners": "Partners",
+    "become_sponsor": "Interested in sponsorship? Contact us:"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Moments from our tournaments and training sessions",
+    "placeholder_text": "Photo coming soon",
+    "btn": "View All Photos"
+  },
+  "about": {
+    "title": "About CYPRUS CATCH'N SERVE BALL FEDERATION",
+    "subtitle": "Building a community through sport",
+    "stat1_number": "2023",
+    "stat1_label": "Year Founded",
+    "stat2_number": "5",
+    "stat2_label": "Active Clubs",
+    "stat3_number": "200+",
+    "stat3_label": "Players in Cyprus",
+    "mission_title": "Our Mission",
+    "mission_text": "CYPRUS CATCH'N SERVE BALL FEDERATION unites clubs and players across the island to develop and promote catchball as an inclusive, dynamic team sport. We organize tournaments, support coaches, and welcome everyone — regardless of age or experience."
   },
   "cookie": {
     "message": "We use Google Analytics to improve your experience.",
