@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Phone } from 'lucide-react';
 import { ContactForm } from '../ui/ContactForm';
 
 export function Footer() {
@@ -26,6 +27,13 @@ export function Footer() {
           </div>
           <div>
             <h4 className="text-lg font-bold mb-4">{t('footer.contact_title')}</h4>
+            <a
+              href="tel:+35799621812"
+              className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors mb-4"
+            >
+              <Phone size={16} className="text-brand-magenta shrink-0" />
+              {t('footer.phone')}
+            </a>
             <ContactForm />
           </div>
         </div>

@@ -75,7 +75,8 @@
     "contact_msg": "Θέλω να μάθω περισσότερα...",
     "contact_btn": "Αποστολή",
     "contact_success": "Εστάλη επιτυχώς!",
-    "contact_error": "Σφάλμα αποστολής."
+    "contact_error": "Σφάλμα αποστολής.",
+    "phone": "+357 99 621812"
   },
   "rules_page": {
     "title_target": "Κανόνες του ",

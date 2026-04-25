@@ -15,7 +15,8 @@ export default function Privacy() {
           <h2 className="text-2xl font-bold text-brand-magenta mb-3">1. Data Controller</h2>
           <p className="text-gray-700 leading-relaxed">
             CYPRUS CATCH'N SERVE BALL FEDERATION, Cyprus.<br />
-            Email: <a href="mailto:contact@catchballcyprus.com" className="text-brand-magenta underline">contact@catchballcyprus.com</a>
+            Email: <a href="mailto:contact@catchballcyprus.com" className="text-brand-magenta underline">contact@catchballcyprus.com</a><br />
+            Phone: <a href="tel:+35799621812" className="text-brand-magenta underline">+357 99 621812</a>
           </p>
         </section>
 

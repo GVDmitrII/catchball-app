@@ -75,7 +75,8 @@
     "contact_msg": "I want to know more about the club...",
     "contact_btn": "Send",
     "contact_success": "Successfully sent!",
-    "contact_error": "Error sending message."
+    "contact_error": "Error sending message.",
+    "phone": "+357 99 621812"
   },
   "rules_page": {
     "title_target": "Rules of ",

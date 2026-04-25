@@ -75,7 +75,8 @@
     "contact_msg": "Хочу узнать больше о клубе...",
     "contact_btn": "Отправить",
     "contact_success": "Заявка успешно отправлена!",
-    "contact_error": "Ошибка при отправке."
+    "contact_error": "Ошибка при отправке.",
+    "phone": "+357 99 621812"
   },
   "rules_page": {
     "title_target": "Правила ",
