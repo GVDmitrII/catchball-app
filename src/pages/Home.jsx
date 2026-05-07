@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import { ArrowRight, Search, Calendar, Info, Users, Trophy, Heart, Activity, CheckCircle2, Camera } from 'lucide-react';
+import { ArrowRight, Search, Calendar, Info, Users, Trophy, Heart, Activity, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import clubsData from '../data/clubs.json';
 import standingsData from '../data/standings.json';
+import galleryData from '../data/gallery.json';
 
 export function Home() {
   const { t } = useTranslation();
@@ -361,55 +362,44 @@ export function Home() {
       </section>
 
       {/* 6. GALLERY */}
-      <section id="gallery" className="bg-white py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section id="gallery" className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('gallery.title')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('gallery.subtitle')}</p>
           </motion.div>
-
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="columns-2 md:columns-3 gap-4 space-y-4"
-          >
-            {[
-              'aspect-video', 'aspect-square', 'aspect-square',
-              'aspect-video', 'aspect-square', 'aspect-video',
-            ].map((aspect, i) => (
-              <div
-                key={i}
-                className={`${aspect} w-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-navy to-brand-dark flex flex-col items-center justify-center gap-3 break-inside-avoid`}
-              >
-                <Camera className="w-10 h-10 text-white/40" />
-                <p className="text-xs text-white/40 font-medium">{t('gallery.placeholder_text')}</p>
-              </div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 10, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center mt-12"
-          >
-            <a
-              href="#gallery"
-              className="inline-block px-8 py-3 rounded-xl border-2 border-brand-magenta text-brand-magenta font-bold hover:bg-brand-magenta hover:text-white transition-colors text-lg"
-            >
-              {t('gallery.btn')}
-            </a>
-          </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex gap-4 overflow-x-auto px-4 md:px-8 pb-4 snap-x snap-mandatory scrollbar-hide"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {galleryData.map((item) => (
+            <div key={item.id} className="flex-none w-72 snap-start">
+              <div className="w-72 h-52 rounded-2xl overflow-hidden bg-gray-100">
+                <img
+                  src={item.src}
+                  alt={item.caption || t('gallery.title')}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              {item.caption && (
+                <p className="mt-2 text-sm text-gray-600 text-center px-1 leading-snug">{item.caption}</p>
+              )}
+            </div>
+          ))}
+        </motion.div>
       </section>
 
       {/* 7. BOTTOM CTA */}
