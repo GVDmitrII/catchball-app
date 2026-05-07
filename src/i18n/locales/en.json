@@ -10,7 +10,7 @@
   },
   "hero": {
     "badge": "CYPRUS CATCH'N SERVE BALL FEDERATION",
-    "title_line1": "Catchball in Cyprus",
+    "title_line1": "CATCH'N SERVE BALL in Cyprus",
     "title_line2": "Join the Game",
     "description": "Health, networking, and female energy. Discover the most dynamic and accessible team sport for women!",
     "btn_join": "Join a Club",
@@ -22,12 +22,12 @@
     "schedule": "Schedule",
     "schedule_desc": "Upcoming matches and open trainings.",
     "what_is_it": "What is this sport?",
-    "what_is_it_desc": "Briefly about the main rules of catchball."
+    "what_is_it_desc": "Briefly about the main rules of CATCH'N SERVE BALL."
   },
   "the_game": {
     "title_target": "Like volleyball, ",
     "title_accent": "but better",
-    "subtitle": "5 reasons why thousands of women around the world choose catchball.",
+    "subtitle": "5 reasons why thousands of women around the world choose CATCH'N SERVE BALL.",
     "catch_title": "Catching instead of hitting",
     "catch_desc": "You must catch the ball with both hands, not hit it. It's safe for joints.",
     "touch_title": "3 touches",
@@ -37,7 +37,7 @@
     "access_title": "Accessibility",
     "access_desc": "The sport is suitable for any fitness level and age.",
     "social_title": "New victories",
-    "social_desc": "Catchball is a powerful community of ambitious women."
+    "social_desc": "CATCH'N SERVE BALL is a powerful community of ambitious women."
   },
   "clubs_section": {
     "title_target": "Our ",
@@ -80,7 +80,7 @@
   },
   "rules_page": {
     "title_target": "Rules of ",
-    "title_accent": "Catchball",
+    "title_accent": "CATCH'N SERVE BALL",
     "subtitle": "The sport that unites. Basic principles of the game.",
     "h2_diff": "Main differences from volleyball",
     "diff_1_html": "The ball must be <strong>caught with both hands</strong> and held for no more than one second.",
@@ -89,7 +89,7 @@
     "diff_4": "The team has the right to 3 touches before transferring the ball to the opponent's side.",
     "diff_5": "The net is located at a height of 2.24 m (standard women's height).",
     "h2_ethics": "Association Code of Ethics",
-    "ethics_desc": "Catchball is first and foremost about respect, female support, and fair play. We do not accept aggression on the court.",
+    "ethics_desc": "CATCH'N SERVE BALL is first and foremost about respect, female support, and fair play. We do not accept aggression on the court.",
     "ethics_1": "Respect your opponents and referees.",
     "ethics_2": "Help newcomers get comfortable on the court.",
     "ethics_3": "Play for health and team enjoyment.",
@@ -126,7 +126,7 @@
   },
   "sponsors": {
     "title": "Partners & Sponsors",
-    "subtitle": "Organizations that support catchball in Cyprus",
+    "subtitle": "Organizations that support CATCH'N SERVE BALL in Cyprus",
     "placeholder": "Your Logo Here",
     "affiliations_title": "International Affiliations",
     "affiliation_icsbf": "ICSBF — International Catch' N Serve Ball Federation",
@@ -151,7 +151,7 @@
     "stat3_number": "200+",
     "stat3_label": "Players in Cyprus",
     "mission_title": "Our Mission",
-    "mission_text": "CYPRUS CATCH'N SERVE BALL FEDERATION unites clubs and players across the island to develop and promote catchball as an inclusive, dynamic team sport. We organize tournaments, support coaches, and welcome everyone — regardless of age or experience."
+    "mission_text": "CYPRUS CATCH'N SERVE BALL FEDERATION unites clubs and players across the island to develop and promote CATCH'N SERVE BALL as an inclusive, dynamic team sport. We organize tournaments, support coaches, and welcome everyone — regardless of age or experience."
   },
   "cookie": {
     "message": "We use Google Analytics to improve your experience.",
