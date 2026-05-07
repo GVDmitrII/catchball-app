@@ -139,7 +139,74 @@ export function Home() {
         </div>
       </section>
 
-      {/* 4. THE GAME */}
+      {/* 4. PRESIDENT */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('president.section_title')}</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex flex-col items-center"
+            >
+              <div className="w-72 h-80 rounded-2xl overflow-hidden shadow-2xl mb-6">
+                <img
+                  src="/president.jpeg"
+                  alt={t('president.name')}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-brand-dark mb-1">{t('president.name')}</h3>
+              <p className="text-brand-magenta font-semibold text-center text-sm px-4">{t('president.role')}</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6"
+            >
+              <p className="text-gray-600 leading-relaxed text-lg">{t('president.bio')}</p>
+
+              <div className="space-y-4">
+                {[
+                  { title: t('president.role1_title'), text: t('president.role1_text') },
+                  { title: t('president.role2_title'), text: t('president.role2_text') },
+                  { title: t('president.role3_title'), text: t('president.role3_text') },
+                  { title: t('president.role4_title'), text: t('president.role4_text') },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-3">
+                    <div className="w-2 h-2 rounded-full bg-brand-magenta mt-2 shrink-0" />
+                    <p className="text-gray-600">
+                      <span className="font-bold text-brand-dark">{item.title}: </span>
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <blockquote className="border-l-4 border-brand-magenta pl-6 py-2">
+                <p className="text-gray-700 italic leading-relaxed">"{t('president.quote')}"</p>
+                <footer className="text-brand-magenta font-bold mt-3">{t('president.quote_author')}</footer>
+              </blockquote>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. THE GAME */}
       <section className="bg-gray-50 py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -275,6 +342,23 @@ export function Home() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-12"
+          >
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 text-center mb-6">{t('sponsors.affiliations_title')}</p>
+            <div className="flex flex-wrap justify-center gap-6">
+              {[t('sponsors.affiliation_icsbf'), t('sponsors.affiliation_csit')].map((name) => (
+                <div key={name} className="bg-white rounded-xl shadow-sm border-2 border-brand-sky/30 px-8 py-5 flex items-center justify-center max-w-xs">
+                  <span className="text-brand-dark font-bold text-sm text-center">{name}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
             <p className="text-xs font-bold uppercase tracking-widest text-gray-400 text-center mb-6">{t('sponsors.title_sponsors')}</p>

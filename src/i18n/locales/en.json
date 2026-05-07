@@ -108,10 +108,29 @@
     "consent_label": "I agree to the processing of my personal data in accordance with the <a href='/privacy'>Privacy Policy</a>",
     "consent_required": "Please confirm your consent to proceed"
   },
+  "president": {
+    "section_title": "President's Message",
+    "name": "Danae Loizou",
+    "role": "President, CYPRUS CATCH'N SERVE BALL FEDERATION",
+    "bio": "Danae Loizou is the driving force behind the sport's growth in Cyprus. A former volleyball player, she discovered Catch' N Serve Ball in 2017 as a player and experienced firsthand its profound impact on women's lives.",
+    "role1_title": "International Role",
+    "role1_text": "Official ICSBF representative in Cyprus and elected member of the International Rules Committee — shaping the sport's global regulations.",
+    "role2_title": "Global Network",
+    "role2_text": "Strategic ties with sports organisations across Europe and Israel.",
+    "role3_title": "Technical Leadership",
+    "role3_text": "Licensed Coach, Multiplier and Referee Mentor — ensuring high standards for matches in Cyprus.",
+    "role4_title": "Women's Champion",
+    "role4_text": "Having served as player, coach, referee and executive, she deeply understands the needs of women over 30 and mothers seeking health, empowerment and community.",
+    "quote": "Catch' N Serve Ball is more than just a game — it is our community. We are building an environment where every woman in Cyprus can feel like an athlete again, regardless of age.",
+    "quote_author": "— Danae Loizou"
+  },
   "sponsors": {
     "title": "Partners & Sponsors",
     "subtitle": "Organizations that support catchball in Cyprus",
     "placeholder": "Your Logo Here",
+    "affiliations_title": "International Affiliations",
+    "affiliation_icsbf": "ICSBF — International Catch' N Serve Ball Federation",
+    "affiliation_csit": "CSIT — International Workers and Amateurs in Sports Confederation",
     "title_sponsors": "Title Sponsors",
     "partners": "Partners",
     "become_sponsor": "Interested in sponsorship? Contact us:"
