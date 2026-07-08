@@ -1,7 +1,7 @@
 {
   "roundA": [
     {
-      "team": "ASIL LYSIS", "teamGr": "Α. ΣΥΛ. ΛΥΣΗΣ",
+      "team": "ASIL LYSIS", "teamGr": "ΑΣΙΛ ΛΥΣΗΣ", "teamRu": "АСИЛ ЛИСИС",
       "matches": [
         { "date": "23/04/26", "setsWon": 0, "set1": 11, "set2": 14, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 25 },
         { "date": "14/05/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42 },
@@ -11,7 +11,7 @@
       "matchPoints": 6, "totalPoints": 163
     },
     {
-      "team": "Dafni Troullon", "teamGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ",
+      "team": "DAFNI TROULLON", "teamGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ", "teamRu": "ДАФНИ ТРУЛЛОН",
       "matches": [
         { "date": "21/04/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42, "note": "F.P" },
         { "date": "07/05/26", "setsWon": 0, "set1": 9, "set2": 18, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 27 },
@@ -21,7 +21,7 @@
       "matchPoints": 2, "totalPoints": 122
     },
     {
-      "team": "Olympias Frenaron", "teamGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ",
+      "team": "OLYMPIAS FRENARON", "teamGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ", "teamRu": "ОЛИМПИАС ФРЕНАРОН",
       "matches": [
         { "date": "03/05/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42 },
         { "date": "07/05/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42 },
@@ -31,7 +31,7 @@
       "matchPoints": 5, "totalPoints": 158
     },
     {
-      "team": "Omonoia Ormidia", "teamGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ",
+      "team": "OMONOIA ORMIDIA", "teamGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ", "teamRu": "ОМОНИЯ ОРМИДИЯ",
       "matches": [
         { "date": "23/04/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42, "note": "F.P" },
         { "date": "05/05/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42 },
@@ -41,7 +41,7 @@
       "matchPoints": 8, "totalPoints": 168
     },
     {
-      "team": "Marathonas", "teamGr": "ΜΑΡΑΘΩΝΑΣ",
+      "team": "MARATHONAS", "teamGr": "ΜΑΡΑΘΩΝΑΣ", "teamRu": "МАРАФОНАС",
       "matches": [
         { "date": "21/04/26", "setsWon": 0, "set1": 19, "set2": 18, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 37, "note": "F.P" },
         { "date": "03/05/26", "setsWon": 0, "set1": 4, "set2": 12, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 16, "note": "F.P" },
@@ -53,7 +53,7 @@
   ],
   "roundB": [
     {
-      "team": "ASIL LYSIS", "teamGr": "Α. ΣΥΛ. ΛΥΣΗΣ",
+      "team": "ASIL LYSIS", "teamGr": "ΑΣΙΛ ΛΥΣΗΣ", "teamRu": "АСИЛ ЛИСИС",
       "matches": [
         { "date": "16/06/26", "setsWon": 1, "set1": 21, "set2": 17, "set3": 13, "win": 0, "setPoints": 1, "totalPoints": 51 },
         { "date": "18/06/26", "setsWon": 1, "set1": 15, "set2": 21, "set3": 9, "win": 0, "setPoints": 1, "totalPoints": 45 },
@@ -63,7 +63,7 @@
       "matchPoints": 4, "totalPoints": 178
     },
     {
-      "team": "Dafni Troullon", "teamGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ",
+      "team": "DAFNI TROULLON", "teamGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ", "teamRu": "ДАФНИ ТРУЛЛОН",
       "matches": [
         { "date": "11/06/26", "setsWon": 2, "set1": 23, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 44, "note": "F.P" },
         { "date": "14/06/26", "setsWon": 0, "set1": 23, "set2": 15, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 38 },
@@ -73,7 +73,7 @@
       "matchPoints": 6, "totalPoints": 189
     },
     {
-      "team": "Olympias Frenaron", "teamGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ",
+      "team": "OLYMPIAS FRENARON", "teamGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ", "teamRu": "ОЛИМПИАС ФРЕНАРОН",
       "matches": [
         { "date": "04/06/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42 },
         { "date": "10/06/26", "setsWon": 0, "set1": 13, "set2": 18, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 31 },
@@ -83,7 +83,7 @@
       "matchPoints": 6, "totalPoints": 167
     },
     {
-      "team": "Omonoia Ormidia", "teamGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ",
+      "team": "OMONOIA ORMIDIA", "teamGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ", "teamRu": "ОМОНИЯ ОРМИДИЯ",
       "matches": [
         { "date": "10/06/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42, "note": "F.P" },
         { "date": "18/06/26", "setsWon": 2, "set1": 21, "set2": 21, "set3": 0, "win": 1, "setPoints": 2, "totalPoints": 42 },
@@ -93,7 +93,7 @@
       "matchPoints": 7, "totalPoints": 177
     },
     {
-      "team": "Marathonas", "teamGr": "ΜΑΡΑΘΩΝΑΣ",
+      "team": "MARATHONAS", "teamGr": "ΜΑΡΑΘΩΝΑΣ", "teamRu": "МАРАФОНАС",
       "matches": [
         { "date": "04/06/26", "setsWon": 0, "set1": 15, "set2": 17, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 32 },
         { "date": "11/06/26", "setsWon": 0, "set1": 21, "set2": 19, "set3": 0, "win": 0, "setPoints": 0, "totalPoints": 40, "note": "F.P" },

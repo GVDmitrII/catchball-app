@@ -8,9 +8,10 @@ import { useTranslation } from 'react-i18next';
 import clubsData from '../data/clubs.json';
 import standingsData from '../data/standings.json';
 import galleryData from '../data/gallery.json';
+import { getLocalizedName } from '../utils/teamName';
 
 export function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="animate-fade-in pb-20">
@@ -441,7 +442,7 @@ export function Home() {
                          idx === 1 ? <span className="text-gray-300">🥈</span> :
                          <span className="text-amber-600">🥉</span>}
                       </td>
-                      <td className="p-6 font-bold text-xl">{row.teamGr}</td>
+                      <td className="p-6 font-bold text-xl">{getLocalizedName(row, i18n.language)}</td>
                       <td className="p-6 text-center text-gray-400 hidden sm:table-cell text-lg">{row.wins}</td>
                       <td className="p-6 text-center font-black text-2xl text-brand-magenta">{row.match_points}</td>
                     </tr>

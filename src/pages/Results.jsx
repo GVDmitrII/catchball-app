@@ -4,10 +4,12 @@ import { ChevronDown } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import matchResults from '../data/matchResults.json';
+import { getLocalizedName } from '../utils/teamName';
 
 function TeamCard({ team }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [expanded, setExpanded] = useState(false);
+  const displayName = getLocalizedName(team, i18n.language);
 
   return (
     <Card className="border border-gray-100 shadow-sm">
@@ -20,8 +22,10 @@ function TeamCard({ team }) {
             {team.team.split(' ').map((w) => w[0]).slice(0, 2).join('')}
           </div>
           <div className="min-w-0">
-            <h3 className="text-lg font-bold text-brand-dark truncate">{team.team}</h3>
-            <p className="text-sm text-gray-500 truncate">{team.teamGr}</p>
+            <h3 className="text-lg font-bold text-brand-dark truncate">{displayName}</h3>
+            {displayName !== team.team && (
+              <p className="text-sm text-gray-500 truncate">{team.team}</p>
+            )}
           </div>
         </div>
 

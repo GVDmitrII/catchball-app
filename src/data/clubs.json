@@ -2,7 +2,8 @@
   {
     "id": "lysis-01",
     "name": "ASIL LYSIS",
-    "nameGr": "Α. ΣΥΛ. ΛΥΣΗΣ",
+    "nameGr": "ΑΣΙΛ ΛΥΣΗΣ",
+    "nameRu": "АСИЛ ЛИСИС",
     "city": "TBD",
     "coach": "TBD",
     "schedule": "TBD",
@@ -11,8 +12,9 @@
   },
   {
     "id": "troullon-01",
-    "name": "Dafni Troullon",
+    "name": "DAFNI TROULLON",
     "nameGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ",
+    "nameRu": "ДАФНИ ТРУЛЛОН",
     "city": "TBD",
     "coach": "TBD",
     "schedule": "TBD",
@@ -25,18 +27,24 @@
   },
   {
     "id": "frenaros-01",
-    "name": "Olympias Frenaron",
+    "name": "OLYMPIAS FRENARON",
     "nameGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ",
+    "nameRu": "ОЛИМПИАС ФРЕНАРОН",
     "city": "TBD",
     "coach": "TBD",
     "schedule": "TBD",
     "whatsapp": "",
-    "image": "/images/teams/general-1.jpg"
+    "image": "/images/teams/Frenaros-1.jpg",
+    "images": [
+      "/images/teams/Frenaros-1.jpg",
+      "/images/teams/Frenaros-2.jpg"
+    ]
   },
   {
     "id": "ormidia-01",
-    "name": "Omonoia Ormidia",
+    "name": "OMONOIA ORMIDIA",
     "nameGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ",
+    "nameRu": "ОМОНИЯ ОРМИДИЯ",
     "city": "TBD",
     "coach": "TBD",
     "schedule": "TBD",
@@ -45,8 +53,9 @@
   },
   {
     "id": "marathonas-01",
-    "name": "Marathonas",
+    "name": "MARATHONAS",
     "nameGr": "ΜΑΡΑΘΩΝΑΣ",
+    "nameRu": "МАРАФОНАС",
     "city": "TBD",
     "coach": "TBD",
     "schedule": "TBD",

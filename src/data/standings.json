@@ -1,7 +1,7 @@
 [
-  { "rank": 1, "team": "Omonoia Ormidia", "teamGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ", "wins": 7, "sets_won": 15, "points_round1": 168, "points_round2": 177, "total_points": 345, "match_points": 15 },
-  { "rank": 2, "team": "Olympias Frenaron", "teamGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ", "wins": 5, "sets_won": 10, "points_round1": 158, "points_round2": 167, "total_points": 325, "match_points": 11 },
-  { "rank": 3, "team": "ASIL LYSIS", "teamGr": "Α. ΣΥΛ. ΛΥΣΗΣ", "wins": 4, "sets_won": 10, "points_round1": 163, "points_round2": 178, "total_points": 341, "match_points": 10 },
-  { "rank": 4, "team": "Dafni Troullon", "teamGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ", "wins": 4, "sets_won": 8, "points_round1": 122, "points_round2": 189, "total_points": 311, "match_points": 8 },
-  { "rank": 5, "team": "Marathonas", "teamGr": "ΜΑΡΑΘΩΝΑΣ", "wins": 0, "sets_won": 0, "points_round1": 83, "points_round2": 92, "total_points": 175, "match_points": 0 }
+  { "rank": 1, "team": "OMONOIA ORMIDIA", "teamGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ", "teamRu": "ОМОНИЯ ОРМИДИЯ", "wins": 7, "sets_won": 15, "points_round1": 168, "points_round2": 177, "total_points": 345, "match_points": 15 },
+  { "rank": 2, "team": "OLYMPIAS FRENARON", "teamGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ", "teamRu": "ОЛИМПИАС ФРЕНАРОН", "wins": 5, "sets_won": 10, "points_round1": 158, "points_round2": 167, "total_points": 325, "match_points": 11 },
+  { "rank": 3, "team": "ASIL LYSIS", "teamGr": "ΑΣΙΛ ΛΥΣΗΣ", "teamRu": "АСИЛ ЛИСИС", "wins": 4, "sets_won": 10, "points_round1": 163, "points_round2": 178, "total_points": 341, "match_points": 10 },
+  { "rank": 4, "team": "DAFNI TROULLON", "teamGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ", "teamRu": "ДАФНИ ТРУЛЛОН", "wins": 4, "sets_won": 8, "points_round1": 122, "points_round2": 189, "total_points": 311, "match_points": 8 },
+  { "rank": 5, "team": "MARATHONAS", "teamGr": "ΜΑΡΑΘΩΝΑΣ", "teamRu": "МАРАФОНАС", "wins": 0, "sets_won": 0, "points_round1": 83, "points_round2": 92, "total_points": 175, "match_points": 0 }
 ]

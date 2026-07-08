@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import standingsData from '../data/standings.json';
+import { getLocalizedName } from '../utils/teamName';
 
 export function Standings() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div className="animate-fade-in py-12 px-4 max-w-5xl mx-auto">
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('standings.season')} <span className="text-brand-magenta">{t('standings.season_year')}</span></h1>
@@ -25,20 +26,25 @@ export function Standings() {
               </tr>
             </thead>
             <tbody>
-              {standingsData.map((row) => (
-                <tr key={row.rank} className="border-b border-gray-50 hover:bg-gray-50 transition-colors bg-white">
-                  <td className="p-6 text-center font-bold text-2xl text-gray-400">
-                    {row.rank === 1 ? '🥇' : row.rank === 2 ? '🥈' : row.rank === 3 ? '🥉' : row.rank}
-                  </td>
-                  <td className="p-6">
-                    <div className="font-bold text-xl text-brand-dark">{row.teamGr}</div>
-                    <div className="text-sm text-gray-500">{row.team}</div>
-                  </td>
-                  <td className="p-6 text-center text-green-600 hidden md:table-cell text-lg">{row.wins}</td>
-                  <td className="p-6 text-center font-black text-2xl text-brand-magenta">{row.match_points}</td>
-                  <td className="p-6 text-center font-bold text-xl text-brand-dark">{row.total_points}</td>
-                </tr>
-              ))}
+              {standingsData.map((row) => {
+                const displayName = getLocalizedName(row, i18n.language);
+                return (
+                  <tr key={row.rank} className="border-b border-gray-50 hover:bg-gray-50 transition-colors bg-white">
+                    <td className="p-6 text-center font-bold text-2xl text-gray-400">
+                      {row.rank === 1 ? '🥇' : row.rank === 2 ? '🥈' : row.rank === 3 ? '🥉' : row.rank}
+                    </td>
+                    <td className="p-6">
+                      <div className="font-bold text-xl text-brand-dark">{displayName}</div>
+                      {displayName !== row.team && (
+                        <div className="text-sm text-gray-500">{row.team}</div>
+                      )}
+                    </td>
+                    <td className="p-6 text-center text-green-600 hidden md:table-cell text-lg">{row.wins}</td>
+                    <td className="p-6 text-center font-black text-2xl text-brand-magenta">{row.match_points}</td>
+                    <td className="p-6 text-center font-bold text-xl text-brand-dark">{row.total_points}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
