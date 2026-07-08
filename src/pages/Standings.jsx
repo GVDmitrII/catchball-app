@@ -19,9 +19,8 @@ export function Standings() {
               <tr className="bg-gray-50 border-b border-gray-100 text-sm uppercase tracking-wider text-gray-500">
                 <th className="p-6 font-semibold text-center w-16">{t('standings.col_rank')}</th>
                 <th className="p-6 font-semibold">{t('standings.col_club')}</th>
-                <th className="p-6 font-semibold text-center">{t('standings.col_games')}</th>
                 <th className="p-6 font-semibold text-center hidden md:table-cell">{t('standings.col_won')}</th>
-                <th className="p-6 font-semibold text-center hidden md:table-cell">{t('standings.col_lost')}</th>
+                <th className="p-6 font-semibold text-center text-brand-dark">Βαθμ.</th>
                 <th className="p-6 font-bold text-center text-brand-dark">{t('standings.col_points')}</th>
               </tr>
             </thead>
@@ -31,11 +30,13 @@ export function Standings() {
                   <td className="p-6 text-center font-bold text-2xl text-gray-400">
                     {row.rank === 1 ? '🥇' : row.rank === 2 ? '🥈' : row.rank === 3 ? '🥉' : row.rank}
                   </td>
-                  <td className="p-6 font-bold text-xl text-brand-dark">{row.team}</td>
-                  <td className="p-6 text-center text-gray-600 text-lg">{row.played}</td>
-                  <td className="p-6 text-center text-green-600 hidden md:table-cell text-lg">{row.won}</td>
-                  <td className="p-6 text-center text-red-500 hidden md:table-cell text-lg">{row.lost}</td>
-                  <td className="p-6 text-center font-black text-2xl text-brand-magenta">{row.points}</td>
+                  <td className="p-6">
+                    <div className="font-bold text-xl text-brand-dark">{row.teamGr}</div>
+                    <div className="text-sm text-gray-500">{row.team}</div>
+                  </td>
+                  <td className="p-6 text-center text-green-600 hidden md:table-cell text-lg">{row.wins}</td>
+                  <td className="p-6 text-center font-black text-2xl text-brand-magenta">{row.match_points}</td>
+                  <td className="p-6 text-center font-bold text-xl text-brand-dark">{row.total_points}</td>
                 </tr>
               ))}
             </tbody>

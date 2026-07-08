@@ -429,8 +429,8 @@ export function Home() {
                   <tr className="border-b border-white/10 bg-white/5 text-sm uppercase tracking-wider text-gray-300">
                     <th className="p-6 font-semibold text-center w-16">{t('standings.col_rank')}</th>
                     <th className="p-6 font-semibold">{t('standings.col_club')}</th>
-                    <th className="p-6 font-semibold text-center hidden sm:table-cell">{t('standings.col_games')}</th>
-                    <th className="p-6 font-semibold text-center text-brand-sky">{t('standings.col_points')}</th>
+                    <th className="p-6 font-semibold text-center hidden sm:table-cell">{t('standings.col_won')}</th>
+                    <th className="p-6 font-semibold text-center text-brand-sky">Βαθμ.</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -441,9 +441,9 @@ export function Home() {
                          idx === 1 ? <span className="text-gray-300">🥈</span> :
                          <span className="text-amber-600">🥉</span>}
                       </td>
-                      <td className="p-6 font-bold text-xl">{row.team}</td>
-                      <td className="p-6 text-center text-gray-400 hidden sm:table-cell text-lg">{row.played}</td>
-                      <td className="p-6 text-center font-black text-2xl text-brand-magenta">{row.points}</td>
+                      <td className="p-6 font-bold text-xl">{row.teamGr}</td>
+                      <td className="p-6 text-center text-gray-400 hidden sm:table-cell text-lg">{row.wins}</td>
+                      <td className="p-6 text-center font-black text-2xl text-brand-magenta">{row.match_points}</td>
                     </tr>
                   ))}
                 </tbody>

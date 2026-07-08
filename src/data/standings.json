@@ -1,7 +1,7 @@
 [
-  { "rank": 1, "team": "Nicosia Stars", "played": 10, "won": 8, "lost": 2, "points": 24 },
-  { "rank": 2, "team": "Limassol Waves", "played": 10, "won": 7, "lost": 3, "points": 21 },
-  { "rank": 3, "team": "Larnaca Sea Gulls", "played": 10, "won": 6, "lost": 4, "points": 18 },
-  { "rank": 4, "team": "Famagusta Phoenix", "played": 10, "won": 5, "lost": 5, "points": 15 },
-  { "rank": 5, "team": "Paphos Aphrodite", "played": 10, "won": 4, "lost": 6, "points": 12 }
+  { "rank": 1, "team": "Omonoia Ormidia", "teamGr": "ΟΜΟΝΟΙΑ ΟΡΜΗΔΕΙΑΣ", "wins": 7, "sets_won": 15, "points_round1": 168, "points_round2": 177, "total_points": 345, "match_points": 15 },
+  { "rank": 2, "team": "Olympias Frenaron", "teamGr": "ΟΛΥΜΠΙΑΣ ΦΡΕΝΑΡΟΥΣ", "wins": 5, "sets_won": 10, "points_round1": 158, "points_round2": 167, "total_points": 325, "match_points": 11 },
+  { "rank": 3, "team": "ASIL LYSIS", "teamGr": "Α. ΣΥΛ. ΛΥΣΗΣ", "wins": 4, "sets_won": 10, "points_round1": 163, "points_round2": 178, "total_points": 341, "match_points": 10 },
+  { "rank": 4, "team": "Dafni Troullon", "teamGr": "ΔΑΦΝΗ ΤΡΟΥΛΛΩΝ", "wins": 4, "sets_won": 8, "points_round1": 122, "points_round2": 189, "total_points": 311, "match_points": 8 },
+  { "rank": 5, "team": "Marathonas", "teamGr": "ΜΑΡΑΘΩΝΑΣ", "wins": 0, "sets_won": 0, "points_round1": 83, "points_round2": 92, "total_points": 175, "match_points": 0 }
 ]
