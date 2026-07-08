@@ -257,11 +257,12 @@ export function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
-          {/* Nicosia */}
+          {/* Team 1 */}
           <Card hoverable className="col-span-1 md:col-span-3 flex flex-col md:flex-row overflow-hidden group min-h-[220px]">
-            <div className="md:w-2/5 min-h-[200px] md:min-h-full bg-sky-100 flex items-center justify-center text-brand-dark text-6xl font-black bg-[url('https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
-              N
-            </div>
+            <div
+              className="md:w-2/5 min-h-[200px] md:min-h-full bg-sky-100 bg-cover bg-center"
+              style={{ backgroundImage: `url('${clubsData[0].image}')` }}
+            />
             <div className="p-8 flex flex-col justify-center bg-white flex-1">
               <h3 className="text-3xl font-bold text-brand-dark mb-1">{clubsData[0].name}</h3>
               <p className="text-brand-magenta font-bold mb-4">{clubsData[0].city}</p>
@@ -270,18 +271,23 @@ export function Home() {
                 <p><strong>{t('clubs_section.schedule')}</strong> {clubsData[0].schedule}</p>
               </div>
               <div className="mt-auto">
-                <a href={`https://wa.me/${clubsData[0].whatsapp.replace('+','')}?text=Hello`} target="_blank" rel="noreferrer">
-                  <Button size="sm" className="w-full">{t('clubs_section.join_whatsapp')}</Button>
-                </a>
+                {clubsData[0].whatsapp ? (
+                  <a href={`https://wa.me/${clubsData[0].whatsapp.replace('+','')}?text=Hello`} target="_blank" rel="noreferrer">
+                    <Button size="sm" className="w-full">{t('clubs_section.join_whatsapp')}</Button>
+                  </a>
+                ) : (
+                  <Button size="sm" className="w-full opacity-50 cursor-not-allowed" disabled>{t('clubs_section.join_whatsapp')}</Button>
+                )}
               </div>
             </div>
           </Card>
 
-          {/* Limassol */}
+          {/* Team 2 */}
           <Card hoverable className="col-span-1 md:col-span-3 flex flex-col md:flex-row overflow-hidden group min-h-[220px]">
-             <div className="md:w-2/5 min-h-[200px] md:min-h-full bg-pink-100 flex items-center justify-center text-brand-magenta text-6xl font-black bg-[url('https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=2007&auto=format&fit=crop')] bg-cover bg-center">
-              L
-            </div>
+            <div
+              className="md:w-2/5 min-h-[200px] md:min-h-full bg-pink-100 bg-cover bg-center"
+              style={{ backgroundImage: `url('${clubsData[1].image}')` }}
+            />
             <div className="p-8 flex flex-col justify-center bg-white flex-1">
               <h3 className="text-3xl font-bold text-brand-dark mb-1">{clubsData[1].name}</h3>
               <p className="text-brand-magenta font-bold mb-4">{clubsData[1].city}</p>
@@ -290,19 +296,24 @@ export function Home() {
                 <p><strong>{t('clubs_section.schedule')}</strong> {clubsData[1].schedule}</p>
               </div>
               <div className="mt-auto">
-                <a href={`https://wa.me/${clubsData[1].whatsapp.replace('+','')}?text=Hello`} target="_blank" rel="noreferrer">
-                  <Button size="sm" variant="secondary" className="w-full">{t('clubs_section.join_whatsapp')}</Button>
-                </a>
+                {clubsData[1].whatsapp ? (
+                  <a href={`https://wa.me/${clubsData[1].whatsapp.replace('+','')}?text=Hello`} target="_blank" rel="noreferrer">
+                    <Button size="sm" variant="secondary" className="w-full">{t('clubs_section.join_whatsapp')}</Button>
+                  </a>
+                ) : (
+                  <Button size="sm" variant="secondary" className="w-full opacity-50 cursor-not-allowed" disabled>{t('clubs_section.join_whatsapp')}</Button>
+                )}
               </div>
             </div>
           </Card>
 
-          {/* Larnaca, Paphos, Famagusta */}
-          {clubsData.slice(2).map((club, i) => (
+          {/* Remaining teams */}
+          {clubsData.slice(2).map((club) => (
              <Card key={club.id} hoverable className="col-span-1 md:col-span-2 overflow-hidden flex flex-col">
-              <div className="h-40 bg-gray-100 flex items-center justify-center text-brand-dark text-6xl font-black opacity-40">
-                {club.city[0]}
-              </div>
+              <div
+                className="h-40 bg-gray-100 bg-cover bg-center"
+                style={{ backgroundImage: `url('${club.image}')` }}
+              />
               <div className="p-6 flex flex-col flex-1 bg-white">
                 <h3 className="text-xl font-bold text-brand-dark mb-1">{club.name}</h3>
                 <p className="text-brand-magenta font-semibold mb-3 text-sm">{club.city}</p>

@@ -1,8 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import clubsData from '../data/clubs.json';
+
+function TeamPhoto({ club }) {
+  const photos = club.images && club.images.length > 1 ? club.images : (club.image ? [club.image] : []);
+  const [index, setIndex] = useState(0);
+
+  if (photos.length === 0) {
+    return (
+      <div className="h-48 bg-gradient-to-br from-brand-navy to-brand-dark flex items-center justify-center text-7xl font-black text-white opacity-90">
+        {club.name[0]}
+      </div>
+    );
+  }
+
+  return (
+    <div className="h-48 bg-gray-100 relative overflow-hidden">
+      <img src={photos[index]} alt={club.name} className="w-full h-full object-cover" />
+      {photos.length > 1 && (
+        <>
+          <button
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIndex((index - 1 + photos.length) % photos.length); }}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-8 h-8 flex items-center justify-center text-brand-dark shadow transition-colors"
+            aria-label="Previous photo"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <button
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIndex((index + 1) % photos.length); }}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-8 h-8 flex items-center justify-center text-brand-dark shadow transition-colors"
+            aria-label="Next photo"
+          >
+            <ChevronRight size={18} />
+          </button>
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+            {photos.map((_, i) => (
+              <span key={i} className={`w-1.5 h-1.5 rounded-full ${i === index ? 'bg-white' : 'bg-white/50'}`} />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
 export function Clubs() {
   const { t } = useTranslation();
@@ -14,9 +57,7 @@ export function Clubs() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {clubsData.map(club => (
           <Card key={club.id} hoverable className="flex flex-col h-full border-t-4 border-t-brand-magenta">
-            <div className="h-48 bg-gray-100 flex items-center justify-center text-7xl font-black text-white bg-gradient-to-br from-brand-navy to-brand-dark opacity-90">
-              {club.city[0]}
-            </div>
+            <TeamPhoto club={club} />
             <div className="p-8 flex flex-col flex-1">
               <h3 className="text-2xl font-bold text-brand-dark mb-1">{club.name}</h3>
               <p className="text-brand-magenta font-bold mb-6">{club.city}</p>
@@ -26,9 +67,13 @@ export function Clubs() {
                 <p><span className="font-semibold text-brand-dark">{t('clubs_section.schedule')}</span><br/>{club.schedule}</p>
               </div>
 
-              <a href={`https://wa.me/${club.whatsapp.replace('+','')}?text=Hello`} target="_blank" rel="noreferrer" className="mt-auto">
-                <Button size="lg" className="w-full">{t('clubs_section.join_whatsapp')}</Button>
-              </a>
+              {club.whatsapp ? (
+                <a href={`https://wa.me/${club.whatsapp.replace('+','')}?text=Hello`} target="_blank" rel="noreferrer" className="mt-auto">
+                  <Button size="lg" className="w-full">{t('clubs_section.join_whatsapp')}</Button>
+                </a>
+              ) : (
+                <Button size="lg" className="w-full mt-auto opacity-50 cursor-not-allowed" disabled>{t('clubs_section.join_whatsapp')}</Button>
+              )}
             </div>
           </Card>
         ))}
