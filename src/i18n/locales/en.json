@@ -4,6 +4,7 @@
     "about": "About",
     "clubs": "Clubs",
     "standings": "Standings",
+    "results": "Results",
     "events": "Events",
     "rules": "Rules",
     "join_btn": "Join the Game"
@@ -59,7 +60,23 @@
     "col_won": "Won",
     "col_lost": "Lost",
     "col_points": "Pts",
-    "view_full": "View full standings →"
+    "view_full": "View full standings →",
+    "view_results": "View full match results →"
+  },
+  "results": {
+    "title": "Match Results",
+    "round1": "Round 1",
+    "round2": "Round 2",
+    "date": "Date",
+    "sets_won": "Sets Won",
+    "set": "Set",
+    "win": "Win",
+    "set_points": "Set Pts",
+    "total_points": "Total Pts",
+    "match_points": "Match Points",
+    "forfeit": "forfeit points",
+    "expand": "View matches",
+    "collapse": "Hide matches"
   },
   "bottom_cta": {
     "title": "Ready to try your first game?",

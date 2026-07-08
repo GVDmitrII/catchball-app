@@ -438,8 +438,9 @@ export function Home() {
                 </tbody>
               </table>
             </div>
-            <div className="p-6 text-center bg-white/5 border-t border-white/10 mt-auto">
+            <div className="p-6 text-center bg-white/5 border-t border-white/10 mt-auto flex flex-col sm:flex-row justify-center gap-2 sm:gap-6">
               <Link to="/standings" className="text-brand-sky font-bold hover:text-white transition-colors text-lg">{t('standings.view_full')}</Link>
+              <Link to="/results" className="text-brand-sky font-bold hover:text-white transition-colors text-lg">{t('standings.view_results')}</Link>
             </div>
           </Card>
         </div>

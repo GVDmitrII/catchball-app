@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import standingsData from '../data/standings.json';
@@ -8,7 +9,8 @@ export function Standings() {
   return (
     <div className="animate-fade-in py-12 px-4 max-w-5xl mx-auto">
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('standings.season')} <span className="text-brand-magenta">{t('standings.season_year')}</span></h1>
-      <p className="text-xl text-gray-600 mb-12">{t('standings.subtitle')}</p>
+      <p className="text-xl text-gray-600 mb-4">{t('standings.subtitle')}</p>
+      <Link to="/results" className="inline-block text-brand-magenta font-bold hover:underline mb-8">{t('standings.view_results')}</Link>
 
       <Card className="overflow-hidden border border-gray-100 shadow-md">
         <div className="overflow-x-auto">

@@ -13,6 +13,7 @@ export function Navbar() {
     { name: t('navbar.about'), path: '/#about' },
     { name: t('navbar.clubs'), path: '/clubs' },
     { name: t('navbar.standings'), path: '/standings' },
+    { name: t('navbar.results'), path: '/results' },
     { name: t('navbar.events'), path: '/events' },
     { name: t('navbar.rules'), path: '/rules' },
   ];
