@@ -5,6 +5,7 @@ import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import matchResults from '../data/matchResults.json';
 import { getLocalizedName } from '../utils/teamName';
+import { Seo } from '../components/Seo';
 
 function TeamCard({ team }) {
   const { t, i18n } = useTranslation();
@@ -140,6 +141,12 @@ export function Results() {
 
   return (
     <div className="animate-fade-in py-12 px-4 max-w-5xl mx-auto">
+      <Seo
+        title={t('results.seo_title')}
+        description={t('results.seo_description')}
+        image="/gallery/photo-06.jpeg"
+        path="/results"
+      />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('results.title')}</h1>
 
       <div className="flex gap-2 mb-10 bg-gray-100 rounded-xl p-1 w-fit">

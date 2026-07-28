@@ -2,11 +2,18 @@ import React from 'react';
 import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import eventsData from '../data/events.json';
+import { Seo } from '../components/Seo';
 
 export function Events() {
   const { t, i18n } = useTranslation();
   return (
     <div className="animate-fade-in py-12 px-4 max-w-4xl mx-auto">
+      <Seo
+        title={t('events_page.seo_title')}
+        description={t('events_page.seo_description')}
+        image="/gallery/photo-02.jpeg"
+        path="/events"
+      />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('events_page.title_target')} <span className="text-brand-magenta">{t('events_page.title_accent')}</span></h1>
       <p className="text-xl text-gray-600 mb-12">{t('events_page.subtitle')}</p>
 

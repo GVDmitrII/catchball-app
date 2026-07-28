@@ -1,5 +1,11 @@
 {
   "org_name": "CYPRUS CATCH'N SERVE BALL FEDERATION",
+  "seo": {
+    "home_title": "Cyprus Catch'n Serve Ball Federation — Beach & Court Catchball in Cyprus",
+    "home_description": "Join the Cyprus Catch'n Serve Ball Federation — 5 active teams, tournaments, and beach games open to everyone. No experience needed.",
+    "privacy_title": "Privacy Policy — Cyprus Catch'n Serve Ball Federation",
+    "privacy_description": "Read how the Cyprus Catch'n Serve Ball Federation collects, uses, and protects your personal data, in line with GDPR requirements for members."
+  },
   "navbar": {
     "about": "About",
     "clubs": "Clubs",
@@ -52,7 +58,9 @@
     "captain": "Captain:",
     "contact_captain": "Message Captain",
     "join_whatsapp": "Join via WhatsApp",
-    "learn_more": "Learn more"
+    "learn_more": "Learn more",
+    "seo_title": "Our Clubs — Cyprus Catch'n Serve Ball Federation",
+    "seo_description": "Meet the 5 active Catch'n Serve Ball clubs across Cyprus — find your nearest team, message the captain, and join a training this week."
   },
   "recruitment": {
     "title": "Start Your Own Team",
@@ -70,7 +78,9 @@
     "col_lost": "Lost",
     "col_points": "Pts",
     "view_full": "View full standings →",
-    "view_results": "View full match results →"
+    "view_results": "View full match results →",
+    "seo_title": "Season 2026 Standings — Cyprus Catch'n Serve Ball",
+    "seo_description": "Check the current Cyprus Catch'n Serve Ball championship table — see how each of the 5 clubs is ranked this season, updated after every match."
   },
   "results": {
     "title": "Match Results",
@@ -86,7 +96,9 @@
     "forfeit": "forfeit points",
     "expand": "View matches",
     "collapse": "Hide matches",
-    "watch_video": "Watch match video"
+    "watch_video": "Watch match video",
+    "seo_title": "Match Results — Cyprus Catch'n Serve Ball Championship",
+    "seo_description": "Full set-by-set results from every Cyprus Catch'n Serve Ball championship match this season, round by round, including video highlights."
   },
   "bottom_cta": {
     "title": "Ready to try your first game?",
@@ -123,14 +135,18 @@
     "ethics_3": "Play for health and team enjoyment.",
     "docs_title": "Official documents",
     "docs_desc": "Full competition regulations and Association charter (PDF).",
-    "btn_download": "Download Rules"
+    "btn_download": "Download Rules",
+    "seo_title": "Rules of Catch'n Serve Ball — How the Game Works",
+    "seo_description": "Learn the basics of Catch'n Serve Ball: catch instead of hit, three touches per side, and a code of ethics built on respect and fair play."
   },
   "events_page": {
     "title_target": "Events ",
     "title_accent": "Calendar",
     "subtitle": "Championship matches, open trainings, and master classes.",
     "type_match": "Official match",
-    "type_training": "Open training / Event"
+    "type_training": "Open training / Event",
+    "seo_title": "Events Calendar — Cyprus Catch'n Serve Ball Federation",
+    "seo_description": "See upcoming Catch'n Serve Ball matches, open trainings, and community events across Cyprus — official fixtures in one place, beginners welcome."
   },
   "gdpr": {
     "consent_label": "I agree to the processing of my personal data in accordance with the <a href='/privacy'>Privacy Policy</a>",
@@ -176,7 +192,9 @@
     "view_all": "View All News",
     "read_more": "Read More",
     "back_to_news": "← Back to News",
-    "contact": "Contact"
+    "contact": "Contact",
+    "seo_title": "News — Cyprus Catch'n Serve Ball Federation",
+    "seo_description": "Latest news from the Cyprus Catch'n Serve Ball Federation — beach games, season updates, and everything happening in the community right now."
   },
   "sponsorsPage": {
     "kicker": "Partnership Opportunities",
@@ -201,7 +219,9 @@
     "bullet6": "Flexible packages — big or small, it all counts",
     "talk_title": "Let's talk",
     "talk_subtitle": "Tell us what you have in mind and we'll build a partnership that fits your brand and your budget.",
-    "talk_note": "Call or message us — we reply fast."
+    "talk_note": "Call or message us — we reply fast.",
+    "seo_title": "Become a Sponsor — Cyprus Catch'n Serve Ball Federation",
+    "seo_description": "Partner with the Cyprus Catch'n Serve Ball Federation — put your brand in front of an engaged community, or support one of our 5 clubs directly."
   },
   "about": {
     "title": "About CYPRUS CATCH'N SERVE BALL FEDERATION",

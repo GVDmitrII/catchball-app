@@ -4,11 +4,18 @@ import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import standingsData from '../data/standings.json';
 import { getLocalizedName } from '../utils/teamName';
+import { Seo } from '../components/Seo';
 
 export function Standings() {
   const { t, i18n } = useTranslation();
   return (
     <div className="animate-fade-in py-12 px-4 max-w-5xl mx-auto">
+      <Seo
+        title={t('standings.seo_title')}
+        description={t('standings.seo_description')}
+        image="/gallery/photo-04.jpeg"
+        path="/standings"
+      />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('standings.season')} <span className="text-brand-magenta">{t('standings.season_year')}</span></h1>
       <p className="text-xl text-gray-600 mb-4">{t('standings.subtitle')}</p>
       <Link to="/results" className="inline-block text-brand-magenta font-bold hover:underline mb-8">{t('standings.view_results')}</Link>

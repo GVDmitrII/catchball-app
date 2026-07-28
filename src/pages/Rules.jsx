@@ -3,11 +3,18 @@ import { Card } from '../components/ui/Card';
 import { Download } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { useTranslation } from 'react-i18next';
+import { Seo } from '../components/Seo';
 
 export function Rules() {
   const { t } = useTranslation();
   return (
     <div className="animate-fade-in py-12 px-4 max-w-4xl mx-auto">
+      <Seo
+        title={t('rules_page.seo_title')}
+        description={t('rules_page.seo_description')}
+        image="/gallery/photo-03.jpeg"
+        path="/rules"
+      />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('rules_page.title_target')}<span className="text-brand-magenta">{t('rules_page.title_accent')}</span></h1>
       <p className="text-xl text-gray-600 mb-12">{t('rules_page.subtitle')}</p>
 

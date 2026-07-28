@@ -10,6 +10,7 @@ import standingsData from '../data/standings.json';
 import galleryData from '../data/gallery.json';
 import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
+import { Seo } from '../components/Seo';
 
 export function Home() {
   const { t, i18n } = useTranslation();
@@ -17,6 +18,12 @@ export function Home() {
 
   return (
     <div className="animate-fade-in pb-20">
+      <Seo
+        title={t('seo.home_title')}
+        description={t('seo.home_description')}
+        image="/gallery/photo-01.jpeg"
+        path="/"
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative bg-brand-dark text-white min-h-[80vh] flex items-center justify-center overflow-hidden">

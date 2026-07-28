@@ -4,6 +4,7 @@ import { Button } from '../components/ui/Button';
 import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import clubsData from '../data/clubs.json';
+import { Seo } from '../components/Seo';
 
 const FEDERATION_WHATSAPP = '+357 99 621812';
 
@@ -53,6 +54,12 @@ export function Clubs() {
   const { t } = useTranslation();
   return (
     <div className="animate-fade-in py-12 px-4 max-w-7xl mx-auto">
+      <Seo
+        title={t('clubs_section.seo_title')}
+        description={t('clubs_section.seo_description')}
+        image="/images/teams/general-1.jpg"
+        path="/clubs"
+      />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('clubs_section.title_target')} <span className="text-brand-magenta">{t('clubs_section.title_accent')}</span></h1>
       <p className="text-xl text-gray-600 mb-12">{t('clubs_section.subtitle')}</p>
 

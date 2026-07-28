@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { useTranslation } from 'react-i18next';
+import { Seo } from '../components/Seo';
 
 const FEDERATION_PHONE = '+357 99 621812';
 const WHATSAPP_DIGITS = FEDERATION_PHONE.replace(/[\s+]/g, '');
@@ -13,6 +14,12 @@ export function Sponsors() {
 
   return (
     <div className="animate-fade-in">
+      <Seo
+        title={t('sponsorsPage.seo_title')}
+        description={t('sponsorsPage.seo_description')}
+        image="/gallery/photo-07.jpeg"
+        path="/sponsors"
+      />
 
       {/* HERO */}
       <section className="relative bg-brand-dark text-white py-24 px-4 text-center overflow-hidden">

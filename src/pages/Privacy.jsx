@@ -1,8 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Seo } from '../components/Seo';
 
 export default function Privacy() {
+  const { t } = useTranslation();
   return (
     <div className="animate-fade-in py-12 px-4 max-w-4xl mx-auto">
+      <Seo
+        title={t('seo.privacy_title')}
+        description={t('seo.privacy_description')}
+        image="/gallery/photo-01.jpeg"
+        path="/privacy"
+      />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-2 tracking-tight">
         Privacy Policy
       </h1>

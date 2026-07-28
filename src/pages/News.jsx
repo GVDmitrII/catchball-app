@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
+import { Seo } from '../components/Seo';
 
 function NewsPhotos({ item, title }) {
   const photos = item.images && item.images.length > 1 ? item.images : (item.image ? [item.image] : []);
@@ -49,6 +50,12 @@ export function News() {
 
   return (
     <div className="animate-fade-in py-12 px-4 max-w-4xl mx-auto">
+      <Seo
+        title={t('news.seo_title')}
+        description={t('news.seo_description')}
+        image="/images/news/beach-games/beach-games-1.jpg"
+        path="/news"
+      />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('news.title')}</h1>
       <p className="text-xl text-gray-600 mb-12">{t('news.latest_subtitle')}</p>
 
