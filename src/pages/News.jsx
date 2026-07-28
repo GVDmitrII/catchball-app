@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
 
-function NewsPhotos({ item }) {
+function NewsPhotos({ item, title }) {
   const photos = item.images && item.images.length > 1 ? item.images : (item.image ? [item.image] : []);
   const [index, setIndex] = useState(0);
 
@@ -13,7 +13,7 @@ function NewsPhotos({ item }) {
 
   return (
     <div className="h-64 md:h-80 bg-gray-100 relative overflow-hidden">
-      <img src={photos[index]} alt="" className="w-full h-full object-cover" />
+      <img src={photos[index]} alt={`${title} — photo ${index + 1}`} className="w-full h-full object-cover object-top" />
       {photos.length > 1 && (
         <>
           <button
@@ -61,7 +61,7 @@ export function News() {
 
           return (
             <Card key={item.id} className="overflow-hidden">
-              <NewsPhotos item={item} />
+              <NewsPhotos item={item} title={title} />
               <div className="p-8">
                 <div className="flex flex-wrap items-center gap-3 mb-4">
                   {category && (

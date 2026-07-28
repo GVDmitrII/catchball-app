@@ -21,7 +21,7 @@ function TeamPhoto({ club }) {
 
   return (
     <div className="h-48 bg-gray-100 relative overflow-hidden">
-      <img src={photos[index]} alt={club.name} className="w-full h-full object-cover" />
+      <img src={photos[index]} alt={club.name} className="w-full h-full object-cover object-top" />
       {photos.length > 1 && (
         <>
           <button
