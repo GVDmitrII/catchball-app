@@ -48,8 +48,15 @@
     "view_all": "View all",
     "coach": "Coach:",
     "schedule": "Schedule:",
+    "captain": "Captain:",
+    "contact_captain": "Message Captain",
     "join_whatsapp": "Join via WhatsApp",
     "learn_more": "Learn more"
+  },
+  "recruitment": {
+    "title": "Start Your Own Team",
+    "text": "We'll teach you everything you need — from first serve to first win.",
+    "cta": "Message Us"
   },
   "standings": {
     "season": "Season ",

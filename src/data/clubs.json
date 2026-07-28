@@ -8,6 +8,8 @@
     "coach": "TBD",
     "schedule": "TBD",
     "whatsapp": "",
+    "captain": "Sabina",
+    "captainPhone": "+357 99 930328",
     "image": "/images/teams/syllogos-lysis-1.jpg"
   },
   {
@@ -19,6 +21,8 @@
     "coach": "TBD",
     "schedule": "TBD",
     "whatsapp": "",
+    "captain": "Efi",
+    "captainPhone": "+357 97 877981",
     "image": "/images/teams/dafni-troullon-1.jpg",
     "images": [
       "/images/teams/dafni-troullon-1.jpg",
@@ -34,6 +38,8 @@
     "coach": "TBD",
     "schedule": "TBD",
     "whatsapp": "",
+    "captain": "Maria",
+    "captainPhone": "+357 96 554566",
     "image": "/images/teams/Frenaros-1.jpg",
     "images": [
       "/images/teams/Frenaros-1.jpg",
@@ -49,6 +55,8 @@
     "coach": "TBD",
     "schedule": "TBD",
     "whatsapp": "",
+    "captain": "Danai",
+    "captainPhone": "+357 99 621812",
     "image": "/images/teams/omonoia-ormidia-1.jpg"
   },
   {
@@ -60,6 +68,8 @@
     "coach": "TBD",
     "schedule": "TBD",
     "whatsapp": "",
+    "captain": "Despo",
+    "captainPhone": "+357 99 425974",
     "image": "/images/teams/marathonas-1.jpeg"
   }
 ]

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import clubsData from '../data/clubs.json';
+
+const FEDERATION_WHATSAPP = '+357 99 621812';
 
 function TeamPhoto({ club }) {
   const photos = club.images && club.images.length > 1 ? club.images : (club.image ? [club.image] : []);
@@ -65,7 +67,21 @@ export function Clubs() {
               <div className="text-gray-600 space-y-3 mb-8 flex-1 text-base">
                 <p><span className="font-semibold text-brand-dark">{t('clubs_section.coach')}</span> {club.coach}</p>
                 <p><span className="font-semibold text-brand-dark">{t('clubs_section.schedule')}</span><br/>{club.schedule}</p>
+                {club.captain && (
+                  <p><span className="font-semibold text-brand-dark">{t('clubs_section.captain')}</span> {club.captain}</p>
+                )}
               </div>
+
+              {club.captainPhone && (
+                <a
+                  href={`https://wa.me/${club.captainPhone.replace(/[\s+]/g, '')}?text=Hello`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mb-3 inline-flex items-center justify-center gap-2 text-brand-magenta font-semibold hover:underline"
+                >
+                  <MessageCircle size={18} /> {t('clubs_section.contact_captain')}
+                </a>
+              )}
 
               {club.whatsapp ? (
                 <a href={`https://wa.me/${club.whatsapp.replace('+','')}?text=Hello`} target="_blank" rel="noreferrer" className="mt-auto">
@@ -77,6 +93,19 @@ export function Clubs() {
             </div>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-20 bg-gray-50 rounded-xl shadow-sm p-10 md:p-14 text-center max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('recruitment.title')}</h2>
+        <p className="text-lg text-gray-600 mb-8">{t('recruitment.text')}</p>
+        <a
+          href={`https://wa.me/${FEDERATION_WHATSAPP.replace(/[\s+]/g, '')}?text=Hello`}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-block"
+        >
+          <Button size="lg" className="px-10">{t('recruitment.cta')}</Button>
+        </a>
       </div>
     </div>
   );
