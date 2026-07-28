@@ -2,7 +2,24 @@ import React from 'react';
 import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import eventsData from '../data/events.json';
-import { Seo } from '../components/Seo';
+import { Seo, SITE_URL } from '../components/Seo';
+
+const eventSchemas = eventsData.map((event) => ({
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "name": event.title,
+  "startDate": event.date,
+  "sport": "Catchball",
+  "location": {
+    "@type": "Place",
+    "name": event.location
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Cyprus Catch'n Serve Ball Federation",
+    "url": SITE_URL
+  }
+}));
 
 export function Events() {
   const { t, i18n } = useTranslation();
@@ -13,6 +30,7 @@ export function Events() {
         description={t('events_page.seo_description')}
         image="/gallery/photo-02.jpeg"
         path="/events"
+        jsonLd={eventSchemas}
       />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('events_page.title_target')} <span className="text-brand-magenta">{t('events_page.title_accent')}</span></h1>
       <p className="text-xl text-gray-600 mb-12">{t('events_page.subtitle')}</p>

@@ -10,7 +10,19 @@ import standingsData from '../data/standings.json';
 import galleryData from '../data/gallery.json';
 import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
-import { Seo } from '../components/Seo';
+import { Seo, SITE_URL } from '../components/Seo';
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "Cyprus Catch'n Serve Ball Federation",
+  "alternateName": "CYCSBF",
+  "url": SITE_URL,
+  "logo": `${SITE_URL}/president.jpeg`,
+  "sport": "Catchball",
+  "areaServed": "Cyprus",
+  "sameAs": ["https://www.youtube.com/@annamarcou"]
+};
 
 export function Home() {
   const { t, i18n } = useTranslation();
@@ -23,6 +35,7 @@ export function Home() {
         description={t('seo.home_description')}
         image="/gallery/photo-01.jpeg"
         path="/"
+        jsonLd={organizationSchema}
       />
 
       {/* 1. HERO SECTION */}

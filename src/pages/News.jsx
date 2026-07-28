@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
-import { Seo } from '../components/Seo';
+import { Seo, SITE_URL } from '../components/Seo';
 
 function NewsPhotos({ item, title }) {
   const photos = item.images && item.images.length > 1 ? item.images : (item.image ? [item.image] : []);
@@ -48,6 +48,33 @@ export function News() {
   const langMap = { el: 'el-GR', ru: 'ru-RU', en: 'en-US' };
   const locale = langMap[i18n.language] || 'en-US';
 
+  const newsSchemas = sorted.map((item) => {
+    const headline = getLocalizedName(item, i18n.language, 'title');
+    const images = item.images && item.images.length
+      ? item.images.map((img) => `${SITE_URL}${img}`)
+      : (item.image ? [`${SITE_URL}${item.image}`] : []);
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": headline,
+      "datePublished": item.date,
+      "image": images,
+      "author": {
+        "@type": "Person",
+        "name": item.author || "Cyprus Catch'n Serve Ball Federation"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cyprus Catch'n Serve Ball Federation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${SITE_URL}/president.jpeg`
+        }
+      }
+    };
+  });
+
   return (
     <div className="animate-fade-in py-12 px-4 max-w-4xl mx-auto">
       <Seo
@@ -55,6 +82,7 @@ export function News() {
         description={t('news.seo_description')}
         image="/images/news/beach-games/beach-games-1.jpg"
         path="/news"
+        jsonLd={newsSchemas}
       />
       <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('news.title')}</h1>
       <p className="text-xl text-gray-600 mb-12">{t('news.latest_subtitle')}</p>

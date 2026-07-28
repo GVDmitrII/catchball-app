@@ -1,11 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SITE_URL = 'https://catchball-app-rb2x.vercel.app';
+export const SITE_URL = 'https://catchball-app-rb2x.vercel.app';
 
-export function Seo({ title, description, image, path = '' }) {
+export function Seo({ title, description, image, path = '', jsonLd }) {
   const url = `${SITE_URL}${path}`;
   const imageUrl = image.startsWith('http') ? image : `${SITE_URL}${image}`;
+  const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
   return (
     <Helmet>
@@ -17,6 +18,9 @@ export function Seo({ title, description, image, path = '' }) {
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
+      {schemas.map((schema, i) => (
+        <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+      ))}
     </Helmet>
   );
 }
