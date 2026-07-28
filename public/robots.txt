@@ -1,0 +1,20 @@
+# TODO: update the Sitemap URL below to the custom domain once one is registered
+# (see CONTEXT.md backlog — "registration of domain"). Currently pointing at the
+# Vercel preview URL.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://catchball-app-rb2x.vercel.app/sitemap.xml
