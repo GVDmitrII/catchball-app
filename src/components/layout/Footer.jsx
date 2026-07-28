@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Phone } from 'lucide-react';
+import { Phone, Youtube } from 'lucide-react';
 import { ContactForm } from '../ui/ContactForm';
 
 export function Footer() {
@@ -33,6 +33,15 @@ export function Footer() {
             >
               <Phone size={16} className="text-brand-magenta shrink-0" />
               {t('footer.phone')}
+            </a>
+            <a
+              href="https://www.youtube.com/@annamarcou"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors mb-4"
+            >
+              <Youtube size={16} className="text-brand-magenta shrink-0" />
+              {t('footer.youtube')}
             </a>
             <ContactForm />
           </div>

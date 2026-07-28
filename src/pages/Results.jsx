@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Play } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { useTranslation } from 'react-i18next';
 import matchResults from '../data/matchResults.json';
@@ -9,6 +9,7 @@ import { getLocalizedName } from '../utils/teamName';
 function TeamCard({ team }) {
   const { t, i18n } = useTranslation();
   const [expanded, setExpanded] = useState(false);
+  const [openVideo, setOpenVideo] = useState(null);
   const displayName = getLocalizedName(team, i18n.language);
 
   return (
@@ -69,29 +70,54 @@ function TeamCard({ team }) {
                 </thead>
                 <tbody>
                   {team.matches.map((m, i) => (
-                    <tr key={i} className="border-b border-gray-50 hover:bg-gray-50 transition-colors bg-white">
-                      <td className="p-4 text-brand-dark font-medium">
-                        {m.date}
-                        {m.note === 'F.P' && (
-                          <span className="ml-2 inline-block text-[10px] font-bold uppercase tracking-wide bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-full align-middle">
-                            {t('results.forfeit')}
-                          </span>
-                        )}
-                      </td>
-                      <td className="p-4 text-center font-semibold">{m.setsWon}</td>
-                      <td className="p-4 text-center text-gray-600">{m.set1}</td>
-                      <td className="p-4 text-center text-gray-600">{m.set2}</td>
-                      <td className="p-4 text-center text-gray-600">{m.set3}</td>
-                      <td className="p-4 text-center">
-                        {m.win ? (
-                          <span className="text-green-600 font-bold">✓</span>
-                        ) : (
-                          <span className="text-red-400 font-bold">✕</span>
-                        )}
-                      </td>
-                      <td className="p-4 text-center font-semibold">{m.setPoints}</td>
-                      <td className="p-4 text-center font-black text-brand-magenta">{m.totalPoints}</td>
-                    </tr>
+                    <React.Fragment key={i}>
+                      <tr className="border-b border-gray-50 hover:bg-gray-50 transition-colors bg-white">
+                        <td className="p-4 text-brand-dark font-medium">
+                          {m.date}
+                          {m.note === 'F.P' && (
+                            <span className="ml-2 inline-block text-[10px] font-bold uppercase tracking-wide bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-full align-middle">
+                              {t('results.forfeit')}
+                            </span>
+                          )}
+                          {m.videoUrl && (
+                            <button
+                              onClick={(e) => { e.stopPropagation(); setOpenVideo(openVideo === i ? null : i); }}
+                              className="ml-2 inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-brand-magenta hover:underline align-middle"
+                            >
+                              <Play size={11} fill="currentColor" /> {t('results.watch_video')}
+                            </button>
+                          )}
+                        </td>
+                        <td className="p-4 text-center font-semibold">{m.setsWon}</td>
+                        <td className="p-4 text-center text-gray-600">{m.set1}</td>
+                        <td className="p-4 text-center text-gray-600">{m.set2}</td>
+                        <td className="p-4 text-center text-gray-600">{m.set3}</td>
+                        <td className="p-4 text-center">
+                          {m.win ? (
+                            <span className="text-green-600 font-bold">✓</span>
+                          ) : (
+                            <span className="text-red-400 font-bold">✕</span>
+                          )}
+                        </td>
+                        <td className="p-4 text-center font-semibold">{m.setPoints}</td>
+                        <td className="p-4 text-center font-black text-brand-magenta">{m.totalPoints}</td>
+                      </tr>
+                      {m.videoUrl && openVideo === i && (
+                        <tr className="bg-gray-50">
+                          <td colSpan={8} className="p-4">
+                            <div className="aspect-video w-full max-w-xl mx-auto rounded-lg overflow-hidden shadow-md">
+                              <iframe
+                                src={m.videoUrl}
+                                title={t('results.watch_video')}
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                      )}
+                    </React.Fragment>
                   ))}
                 </tbody>
               </table>

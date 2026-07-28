@@ -85,7 +85,8 @@
     "match_points": "Match Points",
     "forfeit": "forfeit points",
     "expand": "View matches",
-    "collapse": "Hide matches"
+    "collapse": "Hide matches",
+    "watch_video": "Watch match video"
   },
   "bottom_cta": {
     "title": "Ready to try your first game?",
@@ -102,7 +103,8 @@
     "contact_btn": "Send",
     "contact_success": "Successfully sent!",
     "contact_error": "Error sending message.",
-    "phone": "+357 99 621812"
+    "phone": "+357 99 621812",
+    "youtube": "Watch our videos"
   },
   "rules_page": {
     "title_target": "Rules of ",
