@@ -1,0 +1,28 @@
+# Cyprus Catch'n Serve Ball Federation
+
+Cyprus Catch'n Serve Ball Federation (CYCSBF) — a non-profit sports federation for the sport of Catch'n Serve Ball (Catchball) in Cyprus. Founded 2023.
+
+## What is Catch'n Serve Ball
+
+Catch'n Serve Ball is a team sport similar to volleyball, but the ball must be caught with both hands (not hit) and held for no more than one second. The attack is carried out by throwing the ball with one or two hands, each team gets 3 touches before the ball goes to the opponent's side, and the net is set at 2.24 m (standard women's height).
+
+## Key facts
+
+- 5 active clubs across Cyprus: ASIL LYSIS, DAFNI TROULLON, OLYMPIAS FRENARON, OMONOIA ORMIDIA, MARATHONAS
+- Open to all ages and experience levels; primarily a women's sports community
+- Current season standings: https://catchball-app-rb2x.vercel.app/standings
+- To join: find the nearest club at /clubs and contact the team captain directly
+- Site available in English, Russian, and Greek
+
+## Key pages
+
+- Clubs: https://catchball-app-rb2x.vercel.app/clubs
+- Rules: https://catchball-app-rb2x.vercel.app/rules
+- Standings: https://catchball-app-rb2x.vercel.app/standings
+- Results: https://catchball-app-rb2x.vercel.app/results
+- News: https://catchball-app-rb2x.vercel.app/news
+- Sponsors: https://catchball-app-rb2x.vercel.app/sponsors
+
+## Contact
+
+Phone / WhatsApp: +357 99 621812
