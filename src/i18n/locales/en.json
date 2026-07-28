@@ -7,6 +7,7 @@
     "results": "Results",
     "events": "Events",
     "rules": "Rules",
+    "news": "News",
     "join_btn": "Join the Game"
   },
   "hero": {
@@ -157,6 +158,15 @@
     "subtitle": "Moments from our tournaments and training sessions",
     "placeholder_text": "Photo coming soon",
     "btn": "View All Photos"
+  },
+  "news": {
+    "title": "News",
+    "latest": "Latest News",
+    "latest_subtitle": "What's happening in the Federation right now.",
+    "view_all": "View All News",
+    "read_more": "Read More",
+    "back_to_news": "← Back to News",
+    "contact": "Contact"
   },
   "about": {
     "title": "About CYPRUS CATCH'N SERVE BALL FEDERATION",

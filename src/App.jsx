@@ -9,6 +9,7 @@ import { Rules } from './pages/Rules';
 import { Events } from './pages/Events';
 import { Standings } from './pages/Standings';
 import { Results } from './pages/Results';
+import { News } from './pages/News';
 import Privacy from './pages/Privacy';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/standings" element={<Standings />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/news" element={<News />} />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>

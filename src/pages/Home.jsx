@@ -8,10 +8,12 @@ import { useTranslation } from 'react-i18next';
 import clubsData from '../data/clubs.json';
 import standingsData from '../data/standings.json';
 import galleryData from '../data/gallery.json';
+import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
 
 export function Home() {
   const { t, i18n } = useTranslation();
+  const latestNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 2);
 
   return (
     <div className="animate-fade-in pb-20">
@@ -332,6 +334,48 @@ export function Home() {
           <Link to="/clubs" className="text-brand-magenta font-bold text-lg inline-flex items-center">
             {t('clubs_section.view_all')} <ArrowRight className="w-5 h-5 ml-1"/>
           </Link>
+        </div>
+      </section>
+
+      {/* 4.5 LATEST NEWS */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">{t('news.latest')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('news.latest_subtitle')}</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {latestNews.map((item) => {
+              const title = getLocalizedName(item, i18n.language, 'title');
+              const summary = getLocalizedName(item, i18n.language, 'summary');
+              const image = (item.images && item.images[0]) || item.image;
+
+              return (
+                <Link key={item.id} to="/news">
+                  <Card hoverable className="flex flex-col h-full overflow-hidden">
+                    {image && (
+                      <div className="h-48 bg-gray-100 bg-cover bg-center" style={{ backgroundImage: `url('${image}')` }} />
+                    )}
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="text-xl font-bold text-brand-dark mb-2">{title}</h3>
+                      <p className="text-gray-600 flex-1">{summary}</p>
+                    </div>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link to="/news"><Button size="lg" variant="outline">{t('news.view_all')}</Button></Link>
+          </div>
         </div>
       </section>
 

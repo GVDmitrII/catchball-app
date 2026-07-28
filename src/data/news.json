@@ -1,5 +1,31 @@
 [
   {
+    "id": "news-02",
+    "date": "2026-07-28",
+    "category": "Fun & Games",
+    "categoryRu": "Развлечения",
+    "categoryGr": "Διασκέδαση",
+    "title": "Beach Games Are Back — Join Us!",
+    "titleRu": "Пляжные игры возвращаются — присоединяйтесь!",
+    "titleGr": "Τα Beach Games επιστρέφουν — ελάτε μαζί μας!",
+    "summary": "Catch and Serve is back at CTO Beach every Monday and Thursday, 18:00–20:00 — everyone's welcome, no experience needed!",
+    "summaryRu": "Игры Catch and Serve возвращаются на пляж CTO каждый понедельник и четверг, 18:00–20:00 — ждём всех, опыт не нужен!",
+    "summaryGr": "Το Catch and Serve επιστρέφει στην παραλία CTO κάθε Δευτέρα και Πέμπτη, 18:00–20:00 — όλοι είναι καλοδεχούμενοι, χωρίς εμπειρία!",
+    "body": "Grab your sunscreen and your game face: Catch and Serve is on at CTO Beach every Monday and Thursday, 18:00–20:00. Whether you're a seasoned player or just want to give it a shot, everyone's welcome — no experience needed, just good energy!\n\nCome play, laugh, and compete with the crew, then cool off with a swim in the most perfect sea around. Two evenings a week, zero reasons to miss it.\n\n📍 CTO Beach 🗓️ Mondays & Thursdays ⏰ 18:00–20:00\n\nSee you on the sand!",
+    "bodyRu": "Берите крем от загара и боевой настрой: игры Catch and Serve проходят на пляже CTO каждый понедельник и четверг, с 18:00 до 20:00. Неважно, опытный вы игрок или хотите попробовать впервые — мы рады всем, никакого опыта не требуется, только хорошее настроение!\n\nПриходите поиграть, посмеяться и посоревноваться с командой, а затем освежитесь в самом чистом море в округе. Два вечера в неделю — и ни одной причины пропустить.\n\n📍 Пляж CTO 🗓️ Понедельник и четверг ⏰ 18:00–20:00\n\nУвидимся на песке!",
+    "bodyGr": "Πάρτε το αντηλιακό και τη διάθεσή σας για παιχνίδι: το Catch and Serve παίζεται στην παραλία CTO κάθε Δευτέρα και Πέμπτη, 18:00–20:00. Είτε είστε έμπειρος παίκτης είτε θέλετε απλώς να δοκιμάσετε, όλοι είναι καλοδεχούμενοι — δεν χρειάζεται καμία εμπειρία, μόνο καλή διάθεση!\n\nΕλάτε να παίξετε, να γελάσετε και να συναγωνιστείτε με την παρέα, και μετά δροσιστείτε με ένα μπάνιο στην πιο όμορφη θάλασσα. Δύο βράδια την εβδομάδα, καμία δικαιολογία για να το χάσετε.\n\n📍 Παραλία CTO 🗓️ Δευτέρα & Πέμπτη ⏰ 18:00–20:00\n\nΤα λέμε στην άμμο!",
+    "author": "Anna",
+    "phone": "+357 99 320922",
+    "image": "/images/news/beach-games/beach-games-1.jpg",
+    "images": [
+      "/images/news/beach-games/beach-games-1.jpg",
+      "/images/news/beach-games/beach-games-2.jpg",
+      "/images/news/beach-games/beach-games-3.jpg",
+      "/images/news/beach-games/beach-games-4.jpg",
+      "/images/news/beach-games/beach-games-5.jpg"
+    ]
+  },
+  {
     "id": "news-01",
     "date": "2026-03-15",
     "title": "Новый сезон стартует в апреле!",
