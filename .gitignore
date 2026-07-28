@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# smart-crop originals backups (uncropped source photos, not needed in repo)
+public/images/**/_originals/
