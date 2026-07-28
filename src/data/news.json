@@ -28,8 +28,12 @@
   {
     "id": "news-01",
     "date": "2026-03-15",
-    "title": "Новый сезон стартует в апреле!",
-    "summary": "Приглашаем всех болельщиков и участниц на открытие весеннего сезона по CATCH'N SERVE BALL на Кипре.",
+    "title": "New Season Kicks Off in April!",
+    "titleRu": "Новый сезон стартует в апреле!",
+    "titleGr": "Η νέα σεζόν ξεκινά τον Απρίλιο!",
+    "summary": "We invite all fans and players to the opening of the spring CATCH'N SERVE BALL season in Cyprus.",
+    "summaryRu": "Приглашаем всех болельщиков и участниц на открытие весеннего сезона по CATCH'N SERVE BALL на Кипре.",
+    "summaryGr": "Καλούμε όλους τους φιλάθλους και τις παίκτριες στην έναρξη της ανοιξιάτικης σεζόν του CATCH'N SERVE BALL στην Κύπρο.",
     "image": "/images/news-season.jpg"
   }
 ]
