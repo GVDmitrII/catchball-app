@@ -8,6 +8,7 @@
     "events": "Events",
     "rules": "Rules",
     "news": "News",
+    "sponsors": "Become a Sponsor",
     "join_btn": "Join the Game"
   },
   "hero": {
@@ -174,6 +175,31 @@
     "read_more": "Read More",
     "back_to_news": "← Back to News",
     "contact": "Contact"
+  },
+  "sponsorsPage": {
+    "kicker": "Partnership Opportunities",
+    "title": "Want to become our sponsor?",
+    "subtitle": "Put your brand where the energy is — on the sand, on the court, and in front of a community that shows up every single week.",
+    "cta_whatsapp": "Message Us on WhatsApp",
+    "cards_title": "What your brand gets",
+    "cards_subtitle": "Real visibility, real people, real community — not just a logo in a corner.",
+    "card1_title": "Your logo on our website",
+    "card1_text": "Featured on our official federation site as a partner, with your name, logo, and a link straight to you.",
+    "card2_title": "Shout-outs on social media",
+    "card2_text": "We publish your brand across our social channels — match highlights, training days, and event announcements.",
+    "card3_title": "Banners at games & training",
+    "card3_text": "Your logo printed on our banners, seen live at every game and every training session, week after week.",
+    "team_title": "Or support a team you believe in",
+    "team_subtitle": "Prefer something more personal? You can back one of our clubs directly — and become the name behind their season.",
+    "bullet1": "Sponsor a single team or an entire club",
+    "bullet2": "Help cover kits, equipment and travel",
+    "bullet3": "Your name on team uniforms",
+    "bullet4": "Support youth and beginner players",
+    "bullet5": "Get named as an official team partner",
+    "bullet6": "Flexible packages — big or small, it all counts",
+    "talk_title": "Let's talk",
+    "talk_subtitle": "Tell us what you have in mind and we'll build a partnership that fits your brand and your budget.",
+    "talk_note": "Call or message us — we reply fast."
   },
   "about": {
     "title": "About CYPRUS CATCH'N SERVE BALL FEDERATION",

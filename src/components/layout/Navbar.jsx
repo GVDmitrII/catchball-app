@@ -16,6 +16,7 @@ export function Navbar() {
     { name: t('navbar.results'), path: '/results' },
     { name: t('navbar.news'), path: '/news' },
     { name: t('navbar.events'), path: '/events' },
+    { name: t('navbar.sponsors'), path: '/sponsors' },
     { name: t('navbar.rules'), path: '/rules' },
   ];
 

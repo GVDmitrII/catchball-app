@@ -444,18 +444,23 @@ export function Home() {
             </div>
           </motion.div>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm text-gray-500 text-center"
+            className="text-center"
           >
-            {t('sponsors.become_sponsor')}{' '}
-            <a href="mailto:contact@catchballcyprus.com" className="text-brand-magenta hover:underline">
-              contact@catchballcyprus.com
-            </a>
-          </motion.p>
+            <p className="text-sm text-gray-500 mb-6">
+              {t('sponsors.become_sponsor')}{' '}
+              <a href="mailto:contact@catchballcyprus.com" className="text-brand-magenta hover:underline">
+                contact@catchballcyprus.com
+              </a>
+            </p>
+            <Link to="/sponsors">
+              <Button variant="outline">{t('navbar.sponsors')}</Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
