@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -11,6 +11,7 @@ import galleryData from '../data/gallery.json';
 import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
 import { Seo, SITE_URL } from '../components/Seo';
+import { GoldMedal } from '../components/ui/GoldMedal';
 
 function ServeBall() {
   return (
@@ -27,6 +28,44 @@ function ServeBall() {
       <path d="M4 36 Q28 48 52 36" stroke="#E91E8C" strokeWidth="2.5" fill="none" opacity="0.85" />
       <path d="M28 2 Q16 28 28 54" stroke="#E91E8C" strokeWidth="2" fill="none" opacity="0.55" />
     </svg>
+  );
+}
+
+function parseStatNumber(str) {
+  const match = String(str).match(/^(\d+)(.*)$/);
+  if (!match) return { target: 0, prefix: '', suffix: String(str) };
+  return { target: parseInt(match[1], 10), prefix: '', suffix: match[2] };
+}
+
+function AnimatedStat({ value, label, prefersReducedMotion }) {
+  const { target, suffix } = parseStatNumber(value);
+  const [count, setCount] = useState(prefersReducedMotion ? target : 0);
+  const started = useRef(false);
+
+  const handleEnter = () => {
+    if (started.current || prefersReducedMotion) return;
+    started.current = true;
+    const duration = 1500;
+    const startTime = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      setCount(Math.round(eased * target));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  return (
+    <motion.div
+      className="bg-white rounded-xl shadow-sm p-6 text-center"
+      onViewportEnter={handleEnter}
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      <div className="text-4xl font-bold text-brand-magenta mb-2">{count}{suffix}</div>
+      <div className="text-sm text-brand-dark font-medium">{label}</div>
+    </motion.div>
   );
 }
 
@@ -109,7 +148,7 @@ export function Home() {
             initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/clubs"><Button size="lg" className="w-full sm:w-auto shadow-brand text-lg">{t('hero.btn_join')} <ArrowRight className="ml-2 w-5 h-5"/></Button></Link>
+            <Link to="/clubs"><Button size="lg" pulse className="w-full sm:w-auto shadow-brand text-lg">{t('hero.btn_join')} <ArrowRight className="ml-2 w-5 h-5"/></Button></Link>
             <Link to="/events"><Button variant="outline" size="lg" className="w-full sm:w-auto text-white border-white hover:bg-white hover:text-brand-dark text-lg">{t('hero.btn_training')}</Button></Link>
           </motion.div>
         </div>
@@ -181,10 +220,12 @@ export function Home() {
                 { number: t('about.stat2_number'), label: t('about.stat2_label') },
                 { number: t('about.stat3_number'), label: t('about.stat3_label') },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white rounded-xl shadow-sm p-6 text-center">
-                  <div className="text-4xl font-bold text-brand-magenta mb-2">{stat.number}</div>
-                  <div className="text-sm text-brand-dark font-medium">{stat.label}</div>
-                </div>
+                <AnimatedStat
+                  key={stat.label}
+                  value={stat.number}
+                  label={stat.label}
+                  prefersReducedMotion={prefersReducedMotion}
+                />
               ))}
             </motion.div>
 
@@ -419,7 +460,7 @@ export function Home() {
 
               return (
                 <Link key={item.id} to="/news">
-                  <Card hoverable className="flex flex-col h-full overflow-hidden">
+                  <Card className="flex flex-col h-full overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
                     {image && (
                       <div className="h-48 bg-gray-100 bg-cover bg-center" style={{ backgroundImage: `url('${image}')` }} />
                     )}
@@ -547,9 +588,13 @@ export function Home() {
                   {standingsData.slice(0, 3).map((row, idx) => (
                     <tr key={row.rank} className="border-b border-white/5 hover:bg-white/10 transition-colors">
                       <td className="p-6 text-center font-bold text-2xl">
-                        {idx === 0 ? <span className="text-yellow-400">🥇</span> :
-                         idx === 1 ? <span className="text-gray-300">🥈</span> :
-                         <span className="text-amber-600">🥉</span>}
+                        {idx === 0 ? (
+                          <GoldMedal><span className="text-yellow-400">🥇</span></GoldMedal>
+                        ) : idx === 1 ? (
+                          <span className="text-gray-300">🥈</span>
+                        ) : (
+                          <span className="text-amber-600">🥉</span>
+                        )}
                       </td>
                       <td className="p-6 font-bold text-xl">{getLocalizedName(row, i18n.language)}</td>
                       <td className="p-6 text-center text-gray-400 hidden sm:table-cell text-lg">{row.wins}</td>
@@ -613,7 +658,7 @@ export function Home() {
         <h2 className="text-4xl md:text-6xl font-black text-brand-dark mb-6 tracking-tight">{t('bottom_cta.title')}</h2>
         <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">{t('bottom_cta.subtitle')}</p>
         <Link to="/clubs">
-          <Button size="lg" className="shadow-brand text-xl px-12 py-5 rounded-btn-lg">
+          <Button size="lg" pulse className="shadow-brand text-xl px-12 py-5 rounded-btn-lg">
              {t('bottom_cta.btn')}
           </Button>
         </Link>

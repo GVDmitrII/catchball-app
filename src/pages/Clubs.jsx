@@ -66,7 +66,7 @@ export function Clubs() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {clubsData.map(club => (
-          <Card key={club.id} hoverable className="flex flex-col h-full border-t-4 border-t-brand-magenta">
+          <Card key={club.id} className="flex flex-col h-full border-t-4 border-t-brand-magenta hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
             <TeamPhoto club={club} />
             <div className="p-8 flex flex-col flex-1">
               <h3 className="text-2xl font-bold text-brand-dark mb-1">{club.name}</h3>

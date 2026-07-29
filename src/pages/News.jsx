@@ -96,7 +96,7 @@ export function News() {
           const date = new Date(item.date);
 
           return (
-            <Card key={item.id} className="overflow-hidden">
+            <Card key={item.id} className="overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
               <NewsPhotos item={item} title={title} />
               <div className="p-8">
                 <div className="flex flex-wrap items-center gap-3 mb-4">

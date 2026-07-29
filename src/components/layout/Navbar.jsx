@@ -43,7 +43,7 @@ export function Navbar() {
               </Link>
             ))}
             <LanguageSwitcher />
-            <Link to="/clubs"><Button variant="primary" size="md">{t('navbar.join_btn')}</Button></Link>
+            <Link to="/clubs"><Button variant="primary" size="md" pulse>{t('navbar.join_btn')}</Button></Link>
           </div>
 
           <div className="flex items-center gap-4 md:hidden">
@@ -72,7 +72,7 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-4">
-              <Link to="/clubs"><Button variant="primary" className="w-full">{t('navbar.join_btn')}</Button></Link>
+              <Link to="/clubs"><Button variant="primary" className="w-full" pulse>{t('navbar.join_btn')}</Button></Link>
             </div>
           </div>
         </div>

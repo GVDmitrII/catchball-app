@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import standingsData from '../data/standings.json';
 import { getLocalizedName } from '../utils/teamName';
 import { Seo } from '../components/Seo';
+import { GoldMedal } from '../components/ui/GoldMedal';
 
 export function Standings() {
   const { t, i18n } = useTranslation();
@@ -38,7 +39,9 @@ export function Standings() {
                 return (
                   <tr key={row.rank} className="border-b border-gray-50 hover:bg-gray-50 transition-colors bg-white">
                     <td className="p-6 text-center font-bold text-2xl text-gray-400">
-                      {row.rank === 1 ? '🥇' : row.rank === 2 ? '🥈' : row.rank === 3 ? '🥉' : row.rank}
+                      {row.rank === 1 ? (
+                        <GoldMedal>🥇</GoldMedal>
+                      ) : row.rank === 2 ? '🥈' : row.rank === 3 ? '🥉' : row.rank}
                     </td>
                     <td className="p-6">
                       <div className="font-bold text-xl text-brand-dark">{displayName}</div>

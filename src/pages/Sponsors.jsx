@@ -70,7 +70,7 @@ export function Sponsors() {
               { title: t('sponsorsPage.card2_title'), text: t('sponsorsPage.card2_text') },
               { title: t('sponsorsPage.card3_title'), text: t('sponsorsPage.card3_text') },
             ].map((card, i) => (
-              <Card key={card.title} className="p-8">
+              <Card key={card.title} className="p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
                 <div className="w-10 h-10 rounded-full bg-brand-magenta text-white font-extrabold flex items-center justify-center mb-5">
                   {i + 1}
                 </div>
