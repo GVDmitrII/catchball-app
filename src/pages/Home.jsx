@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { ArrowRight, Search, Calendar, Info, Users, Trophy, Heart, Activity, CheckCircle2 } from 'lucide-react';
@@ -11,6 +11,24 @@ import galleryData from '../data/gallery.json';
 import newsData from '../data/news.json';
 import { getLocalizedName } from '../utils/teamName';
 import { Seo, SITE_URL } from '../components/Seo';
+
+function ServeBall() {
+  return (
+    <svg viewBox="0 0 56 56" width="48" height="48" aria-hidden="true">
+      <defs>
+        <radialGradient id="serveBallGradient" cx="35%" cy="30%" r="70%">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="55%" stopColor="#F5A623" />
+          <stop offset="100%" stopColor="#c97e10" />
+        </radialGradient>
+      </defs>
+      <circle cx="28" cy="28" r="26" fill="url(#serveBallGradient)" />
+      <path d="M4 20 Q28 8 52 20" stroke="#E91E8C" strokeWidth="2.5" fill="none" opacity="0.85" />
+      <path d="M4 36 Q28 48 52 36" stroke="#E91E8C" strokeWidth="2.5" fill="none" opacity="0.85" />
+      <path d="M28 2 Q16 28 28 54" stroke="#E91E8C" strokeWidth="2" fill="none" opacity="0.55" />
+    </svg>
+  );
+}
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -27,6 +45,7 @@ const organizationSchema = {
 export function Home() {
   const { t, i18n } = useTranslation();
   const latestNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 2);
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <div className="animate-fade-in pb-20">
@@ -43,6 +62,27 @@ export function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark to-brand-navy opacity-90 z-0 flex items-center justify-center">
             <div className="text-[15rem] font-black text-white/5 select-none text-center">C&S</div>
         </div>
+
+        {!prefersReducedMotion && (
+          <motion.div
+            aria-hidden="true"
+            className="absolute left-0 z-[5] pointer-events-none hidden sm:block"
+            style={{ top: '9%', opacity: 0.85 }}
+            animate={{
+              x: ['-10vw', '35vw', '75vw', '112vw'],
+              y: [0, -45, -15, 25],
+              rotate: [0, 160, 320, 500],
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              repeatDelay: 1,
+              ease: 'easeInOut',
+            }}
+          >
+            <ServeBall />
+          </motion.div>
+        )}
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-[-5vh]">
           <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
